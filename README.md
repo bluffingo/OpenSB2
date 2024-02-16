@@ -1,0 +1,2 @@
+# bitqobo
+Proprietary Qobo rewrite
