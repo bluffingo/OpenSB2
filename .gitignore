@@ -2,3 +2,6 @@
 vendor/
 composer.phar
 composer.lock
+
+# Compiled SCSS
+/site/img/poktube.css

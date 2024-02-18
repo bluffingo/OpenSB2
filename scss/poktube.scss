@@ -1,0 +1,688 @@
+$font: "Segoe UI","Open Sans","Noto Sans","Roboto","Ubuntu","verdana","arial","sans-serif";;
+
+body {
+    background-color: #fff;
+    color: #222;
+    margin: 0
+}
+
+a:active,a:link,a:visited {
+    color: #123bb7
+}
+
+body,td {
+    font-family: $font;
+    font-size: 12px
+}
+
+.confirmation {
+    font-size: 14px;
+    font-weight: 700;
+    color: #000;
+    border: 3px solid #666;
+    padding: 5px;
+    text-align: center
+}
+
+.moduleEntrySpecifics {
+    font-size: 11px;
+    margin-bottom: 1px;
+    color: #444
+}
+
+.SubTitle {
+    font-size: 14px;
+    font-weight: 700;
+    color: #c63
+}
+
+#flashcontent {
+    padding-top: 10px;
+    padding-bottom: 10px
+}
+
+.watchDescription {
+    padding: 10px 0 5px;
+    border-top: 1px dotted #ccc
+}
+
+.BoxedBorderTable {
+    padding-left: 10px;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-left: 1px solid #ccc
+}
+
+.vertLeftDashTable {
+    border-left: 1px dashed #ccc;
+    background-image: url(/img/long_grad_bg.jpg);
+    background-repeat: repeat-y
+}
+
+.brightLabel,.standoutLabel {
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    color: #000
+}
+
+.brightLabel {
+    color: #fff
+}
+
+#set_of_links {
+    position: relative;
+    padding: none;
+    border: 0;
+    background: #fff;
+    margin-bottom: 20px
+}
+
+#set_of_links a {
+    display: inline;
+    padding: 2px 9px;
+    text-decoration: none;
+    color: #000;
+    background: #ffa
+}
+
+#set_of_links a:hover {
+    background: #e1eaf0;
+    text-decoration: none
+}
+
+#set_of_links a span {
+    display: none
+}
+
+#set_of_links a:hover span {
+    display: inline;
+    position: absolute;
+    top: 30;
+    left: 0;
+    background: #ffa;
+    padding: 5px 15px 5px 0
+}
+
+.SubscriptionTables {
+    border: 0
+}
+
+.SubscriptionTables td {
+    padding: 10px 1px;
+    text-align: center;
+    border-bottom: 1px dashed #666;
+    color: #666
+}
+
+.SubscriptionVideos {
+    background-color: #fff;
+    text-align: center
+}
+
+.SubscriptionVideos td {
+    border-bottom: none
+}
+
+.parentSection {
+    background: #ffc
+}
+
+.childrenSection td,.parentSection td {
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 11px;
+    padding-top: 5px;
+    padding-right: 2px;
+    padding-bottom: 5px;
+    margin-top: 1px
+}
+
+.childrenSection {
+    background: #fff;
+    border-bottom: 1px dashed #ccc
+}
+
+.parentSection td {
+    border-bottom: 1px dashed #ccc
+}
+
+.commentsSpecifics {
+    text-align: center
+}
+
+.userStats {
+    padding-top: 5px
+}
+
+.devIndent {
+    margin-left: 15px;
+    margin-right: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px
+}
+
+.apiShadedBox {
+    background-color: #e5ecf9;
+    padding: 5px
+}
+
+.apiDef {
+    margin-left: 25px
+}
+
+.apiHeader {
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: #a00
+}
+
+.roundedTable {
+    margin: 0 0 1em
+}
+
+.sunkenTitle {
+    font-size: 14px;
+    font-weight: 700;
+    margin: 0 0 5px 5px
+}
+
+.sunkenTitleBar {
+    width: 100%;
+    border-bottom: 1px dashed #999
+}
+
+.sunkenContent {
+    background-color: #ddd;
+    background-image: url(/img/table_results_bg.gif);
+    background-position: left top;
+    background-repeat: repeat-x;
+    padding: 10px
+}
+
+.headertext {
+    color: #fff!important
+}
+
+.alert {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 8px;
+    background-color: #f44336;
+    color: #fff;
+    margin: 15px;
+    vertical-align: baseline
+}
+
+.alert:hover {
+    background-color: #f03c30
+}
+
+.small {
+    font-size: 10px
+}
+
+.label,.title {
+    font-family: $font;
+    font-size: 12px;
+    font-weight: 700;
+    color: #222
+}
+
+.title {
+    font-size: 16px;
+    color: #036
+}
+
+.title_login {
+    font-weight: 400;
+    color: #fff
+}
+
+a.title:active,a.title:link,a.title:visited {
+    color: #cff;
+    font-weight: 700
+}
+
+.table_top,.title_login,a.title:active,a.title:hover,a.title:link,a.title:visited {
+    font-family: $font;
+    font-size: 12px
+}
+
+a.title:hover {
+    color: #cff;
+    font-weight: bolder
+}
+
+.table_top {
+    color: #333
+}
+
+.bold,.table_top {
+    font-weight: 700
+}
+
+.highlight {
+    font-family: $font;
+    color: #333
+}
+
+.highlight,.nav {
+    font-size: 14px;
+    font-weight: 700
+}
+
+.footer,.nav,.nav_sub {
+    font-family: "Segoe UI","Open Sans","Noto Sans","Roboto","Ubuntu","verdana","arial","sans-serif"
+}
+
+.nav_sub {
+    font-size: 13px;
+    font-weight: 400
+}
+
+.footer {
+    font-size: 11px;
+    color: #111
+}
+
+.success {
+    font-size: 14px;
+    font-weight: 700;
+    color: #333
+}
+
+.bodystyle,.error,.success {
+    font-family: "Segoe UI","Open Sans","Noto Sans","Roboto","Ubuntu","verdana","arial","sans-serif"
+}
+
+.error {
+    font-size: 14px;
+    font-weight: 700;
+    color: red
+}
+
+.bodystyle {
+    font-size: 12px
+}
+
+.moduleEntry,.moduleEntry:hover,.moduleEntrySelected,.moduleEntry_alt,.moduleEntry_alt:hover {
+    background-image: url(/img/table_results_selected_bg.gif);
+    background-repeat: repeat-x;
+    background-color: #ffc;
+    background-position: left top;
+    border-bottom: 1px dashed #999;
+    padding: 10px
+}
+
+.moduleEntry,.moduleEntry_alt,.moduleEntry_alt:hover {
+    background-color: #ddd;
+    background-image: url(/img/table_results_bg.gif)
+}
+
+.moduleEntry_alt,.moduleEntry_alt:hover {
+    background-color: #ffc;
+    background-image: url(/img/table_results_selected_bg.gif);
+    border-right: 1px dashed #999
+}
+
+.moduleEntry_alt {
+    background-color: #ddd;
+    background-image: url(/img/table_results_bg.gif)
+}
+
+.moduleEntryThumb {
+    border: 5px solid #fff;
+    margin-right: 10px
+}
+
+.moduleEntryTitle {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 2px;
+    color: #333
+}
+
+.moduleEntryDescription {
+    font-size: 12px;
+    margin-bottom: 6px;
+    color: #333;
+    padding-right: 10px
+}
+
+.moduleEntryDetails,.moduleEntryTags {
+    font-size: 12px;
+    margin-bottom: 5px;
+    color: #444
+}
+
+.moduleEntryDetails {
+    font-size: 11px
+}
+
+.moduleTitle {
+    font-size: 14px;
+    font-weight: 700;
+    margin: 0 0 5px 5px;
+    color: #444
+}
+
+.moduleTitleBar {
+    width: 100%;
+    background-color: #ccc;
+    border-bottom: 1px dashed #999
+}
+
+.moduleFeatured {
+    background-color: #ddd;
+    background-image: url(/img/table_results_bg.gif);
+    background-position: left top;
+    background-repeat: repeat-x;
+    border-bottom: 1px dashed #999;
+    padding: 5px 5px 15px
+}
+
+.moduleFeaturedThumb {
+    border: 5px solid #fff;
+    margin: 5px
+}
+
+.button {
+    padding: 2px 12px
+}
+
+.moduleFeaturedDetails,.moduleFeaturedTitle {
+    font-family: $font;
+    font-size: 11px;
+    font-weight: 700;
+    margin-bottom: 3px;
+    color: #03c
+}
+
+.moduleFeaturedDetails {
+    font-size: 10px;
+    font-weight: 400;
+    color: #666
+}
+
+.moduleFrameBarTitle {
+    font-size: 12px;
+    font-weight: 700;
+    margin: 0 5px 5px;
+    color: #444
+}
+
+.moduleFrameEntry,.moduleFrameEntry:hover,.moduleFrameEntrySelected {
+    width: 270;
+    background-color: #ffc;
+    background-image: url(/img/table_results_selected_bg.gif);
+    background-repeat: repeat-x;
+    background-position: left top;
+    border-bottom: 1px dashed #999;
+    padding: 8px
+}
+
+.moduleFrameEntry {
+    background-color: #ddd;
+    background-image: url(/img/table_results_bg.gif)
+}
+
+.moduleFrameDetails,.moduleFrameTitle {
+    font-family: $font;
+    font-size: 11px;
+    font-weight: 700;
+    margin-bottom: 3px;
+    color: #03c
+}
+
+.moduleFrameDetails {
+    font-size: 10px;
+    font-weight: 400;
+    margin-bottom: 5px;
+    color: #666
+}
+
+.tableFavRemove {
+    margin: 8px 5px 5px 10px
+}
+
+.tableVideoStats {
+    width: 100%;
+    background-image: url(/img/table_results_selected_bg.gif);
+    background-repeat: repeat-x;
+    background-color: #ffc;
+    background-position: left top;
+    border: 1px dashed #cc6;
+    padding-top: 5px;
+    padding-bottom: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px
+}
+
+.tableSubTitle {
+    padding: 0 0 5px;
+    border-bottom: 1px dashed #ccc;
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #c63
+}
+
+.tableSubTitleInfo {
+    font-size: 12px;
+    padding: 3px 3px 3px 10px
+}
+
+.formTitle {
+    padding: 4px 4px 5px 7px;
+    margin-bottom: 10px;
+    background-color: #e5ecf9;
+    border-bottom: 1px dashed #36c;
+    font-family: $font;
+    font-size: 14px;
+    font-weight: 700
+}
+
+.formTable {
+    width: 80%;
+    padding: 5px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.formIntro {
+    font-family: $font;
+    font-size: 13px;
+    font-weight: 400;
+    margin-bottom: 15px;
+    padding-left: 10px
+}
+
+.formHighlight {
+    background-image: url(/img/table_results_selected_bg.gif);
+    background-repeat: repeat-x;
+    background-color: #ffc;
+    background-position: left top;
+    border: 1px dashed #cc6;
+    padding: 7px 7px 10px;
+    margin-bottom: 5px
+}
+
+.formHighlightText {
+    font-family: $font;
+    font-size: 11px;
+    font-weight: 400;
+    color: #663;
+    margin-top: 5px;
+    margin-left: 6px
+}
+
+.formFieldInfo {
+    font-size: 11px;
+    color: #555;
+    margin-top: 5px;
+    margin-bottom: 5px
+}
+
+.pageTitle {
+    padding: 4px 4px 5px 7px;
+    margin-bottom: 15px;
+    background-color: #e5ecf9;
+    border-bottom: 1px dashed #36c;
+    font-family: $font;
+    font-size: 14px;
+    font-weight: 700
+}
+
+.pageTable {
+    margin-bottom: 20px
+}
+
+.pageTable,.pageText {
+    padding: 0 5px
+}
+
+.pageIntro {
+    font-family: $font;
+    font-size: 12px;
+    font-weight: 400;
+    margin-bottom: 15px
+}
+
+.mailMessageArea {
+    background-color: #fff;
+    border: 1px dashed #999;
+    padding: 7px 7px 10px;
+    margin-bottom: 15px
+}
+
+.watchTitleBar {
+    background-color: #ccc;
+    border-bottom: 1px dashed #999
+}
+
+.watchTitle {
+    font-family: $font;
+    font-size: 13px;
+    font-weight: 700;
+    margin-left: 5px;
+    margin-bottom: 6px;
+    color: #333
+}
+
+.watchTable {
+    background-color: #ddd;
+    background-image: url(/img/table_results_bg.gif);
+    background-repeat: repeat-x;
+    background-position: left top;
+    border-bottom: 1px dashed #999;
+    padding: 5px 5px 10px;
+    text-align: center
+}
+
+#flashcontent,.watchInfoArea {
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #fff
+}
+
+#flashcontent {
+    width: 425px;
+    height: 350px;
+    margin-top: 10px;
+    border: 1px solid #ccc
+}
+
+.watchInfoArea {
+    width: 395px;
+    text-align: left;
+    margin-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px
+}
+
+.watchDescription {
+    font-family: $font;
+    font-size: 12px;
+    padding-bottom: 5px;
+    color: #000;
+    border-bottom: 1px dashed #ccc
+}
+
+.header1 {
+    background-image: url(/img/header.gif)
+}
+
+.header2 {
+    background-image: url(/img/subheader.gif)
+}
+
+.watchAdded,.watchDetails,.watchTags {
+    font-family: $font;
+    color: #333
+}
+
+.watchTags {
+    font-size: 12px;
+    margin: 5px 0 10px
+}
+
+.watchAdded,.watchDetails {
+    font-size: 11px
+}
+
+.watchAdded {
+    margin-bottom: 5px
+}
+
+.watchDetails {
+    font-weight: 400
+}
+
+.commentsEntry,.commentsTitle {
+    font-size: 11px;
+    border-bottom: 1px dashed #999
+}
+
+.commentsTitle {
+    font-family: $font;
+    font-weight: 700;
+    color: #333;
+    background-color: #eee;
+    padding: 5px 5px 6px;
+    border-top: 1px dashed #999
+}
+
+.commentsEntry {
+    background-color: #ffc;
+    padding: 10px
+}
+
+.commentsThumb {
+    border: 5px solid #fff;
+    margin-right: 5px
+}
+
+.profileLabel {
+    font-size: 12px;
+    font-weight: 700;
+    color: #d83;
+    margin: 10px 0 2px
+}
+
+.codeArea {
+    background-color: #fff;
+    border: 1px dashed #999;
+    padding: 7px;
+    margin-bottom: 15px
+}
+
+.apiLabel {
+    background-color: #e5ecf9;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding: 10px
+}
