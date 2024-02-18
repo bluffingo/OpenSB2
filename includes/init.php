@@ -14,5 +14,5 @@ spl_autoload_register(function ($class_name) {
     $loaded_classes[] = $class_name;
 });
 
-$database = new DB;
+$db = new DB;
 $frontend = new Frontend;

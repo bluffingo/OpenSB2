@@ -9,8 +9,8 @@ class Frontend {
         $this->twig = new \Twig\Environment($loader);
     }
 
-    function render($name) {
+    function render($name, $array = []) {
         $template = $this->twig->load($name . '.twig');
-        echo $template->render();
+        echo $template->render($array);
     }
 }
