@@ -11,7 +11,8 @@ class FrontendTwigExtension extends \Twig\Extension\AbstractExtension
     {
         return [
             new \Twig\TwigFilter('parse_md_read_only', function ($text) {
-                return "Fuck you";
+                $parsedown = new Parsedown();
+                return $parsedown->text($text);
             }, ['is_safe' => ['html']]),
 
             new \Twig\TwigFilter('parse_md_user_written', function ($text) {

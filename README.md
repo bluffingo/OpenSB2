@@ -26,3 +26,8 @@ Replace ``LOCATION`` with where your copy of bitQobo is located.
     </Directory>
 </VirtualHost>
 ```
+
+## OpenSB migration
+bitQobo is not compatible with OpenSB databases, and vice versa.
+
+We intend on keeping all of the features on OpenSB, which would make migration easier.
