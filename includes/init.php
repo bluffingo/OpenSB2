@@ -14,5 +14,9 @@ spl_autoload_register(function ($class_name) {
     $loaded_classes[] = $class_name;
 });
 
+session_name("qobosession");
+session_start();
+
 $db = new DB;
 $frontend = new Frontend;
+$auth = new Auth($db, (isset($_SESSION['token']) ? $_SESSION['token'] : null));
