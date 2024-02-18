@@ -19,20 +19,37 @@
 										<table cellspacing="0" cellpadding="0" border="0">
 											<tbody>
 												<tr>
-													<td>
-														<a class="headertext" href="signup.php">
-															<strong>Sign Up</strong>
-														</a>
-													</td>
-													<td style="padding: 0px 5px 0px 5px;">|</td>
-													<td>
-														<a class="headertext" href="login.php">Log In</a>
-													</td>
-													<td style="padding: 0px 5px 0px 5px;">|</td>
-													<td style="padding-right: 5px;">
-														<a class="headertext" href="help.php">Help</a>
-													</td>
-
+													{% if loggedIn %}
+														<td>Hello,
+															<a class="headertext" href="profile.php?user={{ userData.name }}">{{ userData.name }}</a>!&nbsp;
+															<img src="/img/mail.gif" border="0" valign="top">&nbsp;(<a class="headertext" href="/my_messages.php">0</a>)</td>
+														<td>&nbsp;&nbsp;|&nbsp;&nbsp;</td>
+														<td>
+															<a class="headertext" href="logout.php">Log Out</a>
+														</td>
+														<td>&nbsp;&nbsp;|&nbsp;&nbsp;</td>
+														<td>
+															<a class="headertext" href="help.php">Help</a>
+														</td>
+														<td>&nbsp;&nbsp;|&nbsp;&nbsp;</td>
+														<td style="padding-right: 5px;">
+															<a href="admin.php" style="color: red">Admin</a>
+														</td>
+													{% else %}
+														<td>
+															<a class="headertext" href="signup.php">
+																<strong>Sign Up</strong>
+															</a>
+														</td>
+														<td style="padding: 0px 5px 0px 5px;">|</td>
+														<td>
+															<a class="headertext" href="login.php">Log In</a>
+														</td>
+														<td style="padding: 0px 5px 0px 5px;">|</td>
+														<td style="padding-right: 5px;">
+															<a class="headertext" href="help.php">Help</a>
+														</td>
+													{% endif %}
 												</tr>
 											</tbody>
 										</table>
@@ -98,10 +115,6 @@
 													<td>
 														<a class="headertext" href="browse.php">Browse</a>
 													</td>
-													<td>&nbsp;|&nbsp;</td>
-													<td>
-														<a class="headertext" href="https://discord.gg/72ZPaTtXct">Discord</a>
-													</td>
 												</tr>
 											</tbody>
 										</table>
@@ -124,7 +137,7 @@
 			<tbody>
 				<tr>
 					<td style="padding-bottom: 25px;" bgcolor="#FFFFFF">
-						<div style="padding: 0px 5px 0px 5px;"> 
+						<div style="padding: 0px 5px 0px 5px;">
 						{% block content %}{% endblock %}
 						</div>
 					</td>

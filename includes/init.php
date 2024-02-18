@@ -18,5 +18,6 @@ session_name("qobosession");
 session_start();
 
 $db = new DB;
-$frontend = new Frontend;
 $auth = new Auth($db, (isset($_SESSION['token']) ? $_SESSION['token'] : null));
+
+$frontend = new Frontend($db, $auth);

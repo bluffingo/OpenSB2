@@ -4,6 +4,7 @@
 class DB
 {
     private $db;
+    private $allQueries;
     function __construct()
     {
         // TODO: configuration file
@@ -13,6 +14,8 @@ class DB
         $password = '';
 
         $connection = 'mysql:dbname=' . $database . ';host=' . $ip;
+
+        $this->allQueries = [];
 
         try {
             $this->db = new PDO($connection, $user, $password);
@@ -25,6 +28,7 @@ class DB
     {
         try {
             $result = $this->db->prepare($query);
+            $this->allQueries[] = $result->queryString;
             $result->execute($params);
         } catch (PDOException $e) {
             die('DB execute fail: ' . $e);
@@ -39,5 +43,10 @@ class DB
         } else {
             return $result->fetchAll(PDO::FETCH_ASSOC);
         }
+    }
+
+    public function getAllQueries()
+    {
+        return $this->allQueries;
     }
 }
