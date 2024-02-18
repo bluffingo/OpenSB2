@@ -3,6 +3,8 @@
 
 define("QOBO_ROOT", dirname(__DIR__));
 
+include QOBO_ROOT . '/vendor/autoload.php';
+
 $loaded_classes = [];
 
 spl_autoload_register(function ($class_name) {
@@ -13,7 +15,4 @@ spl_autoload_register(function ($class_name) {
 });
 
 $database = new DB;
-
-var_dump($loaded_classes);
-
-?>
+$frontend = new Frontend;

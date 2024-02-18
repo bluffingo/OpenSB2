@@ -3,6 +3,14 @@
 
 class DB {
     function __construct() {
-        echo("DB Construct Placeholder");
+        // TODO: configuration file
+        $database = 'qobo_development'; // this is not compatible with opensb databases.
+        $ip = '127.0.0.1';
+        $user = 'root';
+        $password = '';
+
+        $connection = 'mysql:dbname='.$database.';host='.$ip;
+
+        $dbh = new PDO($connection, $user, $password);
     }
 }
