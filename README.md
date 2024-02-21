@@ -1,5 +1,5 @@
 # bitQobo
-Proprietary Qobo rewrite
+Proprietary squareBracket rewrite for Qobo and cheeseRox.
 
 ## Installation
 We'll assume you already have a webserver, preferably Apache. If this somehow gets leaked and you're reading this without being a contributor, we will not offer help regarding troubles setting it up.
