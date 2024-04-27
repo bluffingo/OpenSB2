@@ -8,7 +8,7 @@ class DB
     function __construct()
     {
         // TODO: configuration file
-        $database = 'qobo_development'; // don't use opensb-style dbs, they won't be compatible.
+        $database = 'sb'; // don't use opensb-style dbs, they won't be compatible.
         $ip = '127.0.0.1';
         $user = 'root';
         $password = '';

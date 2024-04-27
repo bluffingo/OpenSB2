@@ -1,3 +1,3 @@
 # Guidelines placeholder page
 
-Go there -> https://qobo.tv/guidelines
+Go there -> https://squarebracket.pw/guidelines

@@ -2,4 +2,4 @@
 
 It'll need to be rewritten.
 
-Go there -> https://qobo.tv/privacy
+Go there -> https://squarebracket.pw/privacy
