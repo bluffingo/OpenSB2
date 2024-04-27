@@ -1,5 +1,5 @@
 <?php
-// Copyright Bluffingo 2024, all rights reserved.
+// Copyright Chaziz 2024, all rights reserved.
 
 class Frontend {
     private $twig;

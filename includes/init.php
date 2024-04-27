@@ -1,5 +1,5 @@
 <?php
-// Copyright Bluffingo 2024, all rights reserved.
+// Copyright Chaziz 2024, all rights reserved.
 
 define("QOBO_ROOT", dirname(__DIR__));
 
