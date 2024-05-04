@@ -5,11 +5,58 @@
 	<tbody>
 		<tr>
 			<td>
-				<div>
-					<h1>Introducing Qobo: Your Hub for Multimedia Magic!</h1>
-					<p>Share your creative masterpieces with ease - whether it's artwork, music, or videos!</p>
+				<div class="introduction">
+					<table width="800" cellspacing="0" cellpadding="0" border="0" align="center">
+						<tbody>
+							<tr>
+								<td>
+									<h1>Introducing Qobo: Your Hub for Multimedia Magic!</h1>
+									<p>Share your creative masterpieces with ease - whether it's artwork, music, or videos!</p>
+								</td>
+								<td>
+									<a href="/signup.php">
+										<img src="/img/indexSignup.png">
+									</a>
+									<a href="/signin.php">
+										<img src="/img/indexSignin.png">
+									</a>
+								</td>
+							</tr>
+						</tbody>
+					</table>
 				</div>
-				<p>(add more later)</p>
+				<div>
+				{% if submissions %}
+				{% for submission in submissions %}
+				<div class="submission">
+				<table cellspacing="0" cellpadding="0" border="0">
+					<tbody>
+						<tr valign="top">
+							<td>
+								<a href="watch.php?v={{ submission.display_id }}">
+									<img src="img/default.png" class="submissionThumb" width="120" height="90">
+								</a>
+							</td>
+							<td width="100%">
+							<div class="submissionTitle"><a href="watch.php?v={{ submission.display_id }}">{{ submission.title }}</a></div>
+							<div class="submissionDescription">
+								{% if submission.description %}
+								{{ submission.description }}
+								{% else %}
+								No description.
+								{% endif %}
+							</div>
+							<div class="submissionDetails"><a href="profile.php?user=Username">Username</a> | {{ submission.published | date('F j, Y') }}</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				</div>
+				{% endfor %}
+				{% else %}
+				No submissions.
+				{% endif %}	
+				</div>
 			</td>
 		</tr>
 	</tbody>

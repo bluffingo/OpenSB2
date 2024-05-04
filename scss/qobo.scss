@@ -4,7 +4,13 @@ $border-color: #ddd;
 body {
     background-color: #fff;
     color: #000;
-    margin: 0
+    margin: 0;
+    font-family: $font;
+    font-size: 12px
+}
+
+div, td {
+    font-size: 12px
 }
 
 a:active,a:link,a:visited {
@@ -12,9 +18,25 @@ a:active,a:link,a:visited {
     text-decoration: none;
 }
 
-body,td {
-    font-family: $font;
-    font-size: 12px
+h1,h2,h3,h4,h5,h6 {
+    padding: 0;
+	margin: 0;
+}
+
+h1 { font-size: 19px; }
+
+h2 { font-size: 16px; }
+	
+h3 { font-size: 14px; }
+
+h4 { font-size: 12px; }
+
+h5 { font-size: 10px; }
+
+h6 { font-size: 10px; }
+
+.img {
+    border: 0; // ie6
 }
 
 .headerOne {
@@ -54,7 +76,38 @@ body,td {
 }
 
 .footer {
-    border-bottom: 1px solid $border-color;
-    padding: 5px 0;
+    text-align: center;
+    border-top: 1px solid $border-color;
+    margin-top: 10px;
+    padding: 15px 0;
+}
+
+// index
+.introduction {
     margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid $border-color;
+}
+
+.submission {
+    margin-bottom: 1px;
+
+    .submissionThumb {
+        border: 1px solid #666;
+        margin-right: 10px;
+    }
+
+    .submissionTitle {
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    .submissionDescription {
+        margin-bottom: 2px;
+    }
+
+    .submissionDetails {
+        font-size: 12px;
+        color: #888;
+    }
 }
