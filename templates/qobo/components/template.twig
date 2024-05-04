@@ -1,0 +1,79 @@
+<html>
+    <head>
+        <title>Qobo.TV</title>
+    </head>
+    <body>
+
+        <table width="800" cellspacing="2" cellpadding="0" border="0" align="center">
+            <tbody>
+                <tr>
+                    <td>
+                        <table width="800" height="50" cellspacing="10" cellpadding="0" border="0">
+                            <tr>
+                                <td width="129">
+                                    <div>
+                                        <img src="/img/qobo.png" alt="Qobo.TV Preview" width="129"></img>
+                                    </div>
+                                </td>
+                                <td valign="center">
+                                    <div>
+                                        <form action="/search.php">
+                                            <input type="text" name="search">
+                                            <input type="submit" value="Search">
+                                        </form>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <table width="800" height="20" cellspacing="10" cellpadding="0" border="0">
+                            <tr>
+                                <td align="left">
+                                    <div>
+                                        <a href="/">Home</a>
+                                        <a href="/browse">Browse</a>
+                                    </div>
+                                </td>
+                                <td align="right">
+                                    {% if loggedIn %}
+                                        <a href="/browse">Browse</a>
+                                        <a href="/browse">Browse</a>
+                                        <a href="/browse">Browse</a>
+                                    {% else %}
+                                        <a href="/login">Log-in</a>
+                                        <a href="/signup">Sign-up</a>
+                                    {% endif %}
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div>
+                        {% block content %}{% endblock %}
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table cellspacing="0" cellpadding="0" border="0" align="center">
+            <tbody>
+                <tr>
+                    <td valign="center" align="center">
+                        <span>
+                            <img src="/img/chaziz.png">
+                            <br>
+                            © 2004 Chaziz
+                        </span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+    </body>
+</html>

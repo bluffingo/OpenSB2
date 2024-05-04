@@ -7,7 +7,7 @@ class Frontend {
     private $auth;
 
     function __construct($db, $auth) {
-        $loader = new \Twig\Loader\FilesystemLoader(QOBO_ROOT . '/templates/decoy/');
+        $loader = new \Twig\Loader\FilesystemLoader(QOBO_ROOT . '/templates/qobo/');
         $this->twig = new \Twig\Environment($loader);
         $this->twig->addExtension(new FrontendTwigExtension());
 
