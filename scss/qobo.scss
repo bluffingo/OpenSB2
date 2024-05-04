@@ -1,0 +1,60 @@
+$font: Arial, Helvetica, sans-serif;
+$border-color: #ddd;
+
+body {
+    background-color: #fff;
+    color: #000;
+    margin: 0
+}
+
+a:active,a:link,a:visited {
+    color: #1f40a0;
+    text-decoration: none;
+}
+
+body,td {
+    font-family: $font;
+    font-size: 12px
+}
+
+.headerOne {
+    /* todo */
+}
+
+.headerTwo {
+    border-bottom: 1px solid $border-color;
+    padding: 5px 0;
+    margin-bottom: 10px;
+}
+
+.headerLinks {
+    a:active,a:link,a:visited {
+        color: #000
+    }
+
+    a {
+        font-size: 14px;
+        font-weight: bold;
+        &:hover {
+            color: #1f40a0;
+        }
+    }
+    
+    &.alignedLeft {
+        a {
+            margin-right: 15px;
+        }
+    }
+
+    &.alignedRight {
+        a {
+            margin-left: 15px;
+        }
+    }
+}
+
+.footer {
+    border-bottom: 1px solid $border-color;
+    padding: 5px 0;
+    margin-bottom: 10px;
+}

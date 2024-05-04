@@ -1,14 +1,14 @@
 <html>
     <head>
         <title>Qobo.TV</title>
+        <link rel="stylesheet" href="img/qobo.css" type="text/css">
     </head>
     <body>
-
         <table width="800" cellspacing="2" cellpadding="0" border="0" align="center">
             <tbody>
                 <tr>
                     <td>
-                        <table width="800" height="50" cellspacing="10" cellpadding="0" border="0">
+                        <table width="800" height="50" cellspacing="5" cellpadding="0" border="0" class="headerOne">
                             <tr>
                                 <td width="129">
                                     <div>
@@ -29,23 +29,25 @@
                 </tr>
                 <tr>
                     <td>
-                        <table width="800" height="20" cellspacing="10" cellpadding="0" border="0">
+                        <table width="800" height="20" cellspacing="5" cellpadding="0" border="0" class="headerTwo">
                             <tr>
                                 <td align="left">
-                                    <div>
+                                    <div class="headerLinks alignedLeft">
                                         <a href="/">Home</a>
-                                        <a href="/browse">Browse</a>
+                                        <a href="/browse.php">Browse</a>
                                     </div>
                                 </td>
                                 <td align="right">
-                                    {% if loggedIn %}
-                                        <a href="/browse">Browse</a>
-                                        <a href="/browse">Browse</a>
-                                        <a href="/browse">Browse</a>
-                                    {% else %}
-                                        <a href="/login">Log-in</a>
-                                        <a href="/signup">Sign-up</a>
-                                    {% endif %}
+                                    <div class="headerLinks alignedRight">
+                                        {% if loggedIn %}
+                                            <a href="/browse.php">Browse</a>
+                                            <a href="/browse.php">Browse</a>
+                                            <a href="/browse.php">Browse</a>
+                                        {% else %}
+                                            <a href="/login.php">Log-in</a>
+                                            <a href="/signup.php">Sign-up</a>
+                                        {% endif %}
+                                    </div>
                                 </td>
                             </tr>
                         </table>
@@ -58,22 +60,16 @@
                         </div>
                     </td>
                 </tr>
-            </tbody>
-        </table>
-
-        <table cellspacing="0" cellpadding="0" border="0" align="center">
-            <tbody>
                 <tr>
-                    <td valign="center" align="center">
-                        <span>
+                    <td>
+                        <div align="center">
                             <img src="/img/chaziz.png">
                             <br>
                             © 2004 Chaziz
-                        </span>
+                        </div>
                     </td>
                 </tr>
             </tbody>
         </table>
-
     </body>
 </html>
