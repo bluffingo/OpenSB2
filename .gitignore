@@ -5,3 +5,7 @@ composer.lock
 
 # Compiled SCSS
 /site/img/poktube.css
+/site/img/qobo.css
+
+# config
+/config/config.php

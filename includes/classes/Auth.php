@@ -7,6 +7,7 @@ class Auth {
     private $loggedin;
     private $data;
     private $id;
+
     function __construct(DB $db, $token) {
         $this->db = $db;
         $this->loggedin = false;

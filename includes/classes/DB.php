@@ -1,24 +1,19 @@
 <?php
-// Copyright Chaziz and Bittoco 2024, all rights reserved.
+// Copyright Chaziz, RGB and Bittoco 2024, all rights reserved.
 
 class DB
 {
     private $db;
     private $allQueries;
-    function __construct()
-    {
-        // TODO: configuration file
-        $database = 'sb'; // don't use opensb-style dbs, they won't be compatible.
-        $ip = '127.0.0.1';
-        $user = 'root';
-        $password = '';
 
-        $connection = 'mysql:dbname=' . $database . ';host=' . $ip;
+    function __construct($config)
+    {
+        $connection = 'mysql:dbname=' . $config["mysql"]["database"] . ';host=' . $config["mysql"]["host"];
 
         $this->allQueries = [];
 
         try {
-            $this->db = new PDO($connection, $user, $password);
+            $this->db = new PDO($connection, $config["mysql"]["username"], $config["mysql"]["password"]);
         } catch (PDOException $e) {
             die('DB fail: ' . $e);
         }

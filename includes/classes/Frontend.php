@@ -8,6 +8,7 @@ class Frontend {
 
     function __construct($db, $auth) {
         $loader = new \Twig\Loader\FilesystemLoader(QOBO_ROOT . '/templates/qobo/');
+        
         $this->twig = new \Twig\Environment($loader);
         $this->twig->addExtension(new FrontendTwigExtension());
 
