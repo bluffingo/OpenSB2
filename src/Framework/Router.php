@@ -57,11 +57,11 @@ class Router {
 
                         if ($reflectedMethod->isPublic() && (!$reflectedMethod->isAbstract())) {
                             if ($reflectedMethod->isStatic()) {
-                                forward_static_call_array([$controller, $method], []);
+                                return forward_static_call_array([$controller, $method], []);
                             } else {
                                 $controller = new $controller();
 
-                                call_user_func_array([$controller, $method], []);
+                                return call_user_func_array([$controller, $method], []);
                             }
                         }
                     } catch (\ReflectionException $reflectionException) {}

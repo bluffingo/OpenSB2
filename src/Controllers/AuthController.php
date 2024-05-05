@@ -29,6 +29,8 @@ class AuthController extends Controller {
                 $_SESSION['token'] = $login['token'];
             }
         }
+
+        $this->redirect("/");
     }
 
     public function signup() { 
@@ -71,11 +73,12 @@ class AuthController extends Controller {
             }
         
             $token = bin2hex(random_bytes(50)); // has to be half of the maximum length (100) or it fucks shit up.
-            $submissions = $this->db->execute("INSERT INTO users (name, email, passhash, joined, token) VALUES (?,?,?,?,?)", 
-                                        [$username, $mail, password_hash($pass1, PASSWORD_DEFAULT), time(), $token]);
+            $this->db->execute("INSERT INTO users (name, email, passhash, joined, token) VALUES (?,?,?,?,?)", 
+                                [$username, $mail, password_hash($pass1, PASSWORD_DEFAULT), time(), $token]);
         
             $_SESSION['token'] = $token;
         }
         
+        $this->redirect("/");
     }
 }
