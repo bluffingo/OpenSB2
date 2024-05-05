@@ -1,8 +1,8 @@
 # bitQobo (closedSB)
-Proprietary squareBracket rewrite for Qobo.
+Qobo's codebase.
 
 ## Installation
-We'll assume you already have a webserver, preferably Apache. If this somehow gets leaked and you're reading this without being a contributor, we will not offer help regarding troubles setting it up.
+We'll assume you already have a webserver, preferably Apache. If this somehow gets leaked and you're reading this without being part of Bittoco, we will not offer help regarding troubles setting it up.
 
 1. Run ``composer update`` in the terminal. This is required for dependencies to work.
 2. (Placeholder regarding DB user configuration, and likely BunnyCDN-related stuff)
@@ -27,7 +27,5 @@ Replace ``LOCATION`` with where your copy of bitQobo is located.
 </VirtualHost>
 ```
 
-## OpenSB migration
+## Regarding OpenSB
 bitQobo is not compatible with OpenSB databases, and vice versa.
-
-We intend on keeping all of the features on OpenSB, which would make migration easier.
