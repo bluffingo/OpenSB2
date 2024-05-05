@@ -35,8 +35,8 @@ h5 { font-size: 10px; }
 
 h6 { font-size: 10px; }
 
-.img {
-    border: 0; // ie6
+img {
+    border: 0; // ie6 and ff 0.8 put borders by default for a stupid reason
 }
 
 .headerOne {
