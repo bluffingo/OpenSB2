@@ -10,7 +10,7 @@ We'll assume you already have a webserver (preferably Apache) and a MySQL or Mar
 4. Compile the SCSS using the ``compile-scss.sh`` script available in the ``tools`` folder.
 
 ### Apache virtual host
-Replace ``LOCATION`` with where your copy of bitQobo is located.
+Replace ``LOCATION`` with where your copy of bitQobo is located. (THIS IS OUTDATED)
 
 ```
 <VirtualHost *> 

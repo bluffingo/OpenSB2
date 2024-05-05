@@ -1,7 +1,7 @@
 <?php
 // Copyright Chaziz, RGB and Bittoco 2024, all rights reserved.
 
-$config = [
+return [
     // Database details. (Qobo only supports MySQL / MariaDB databases)
     "mysql" => [
         "database" => "sb",

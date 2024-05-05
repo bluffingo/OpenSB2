@@ -1,5 +1,10 @@
 <?php
-// Copyright Chaziz and Bittoco 2024, all rights reserved.
+// Copyright Chaziz, RGB and Bittoco 2024, all rights reserved.
+
+namespace Qobo\Framework;
+
+use Qobo\App;
+use Qobo\Framework\DB;
 
 class Auth {
     private $db;
@@ -8,15 +13,15 @@ class Auth {
     private $data;
     private $id;
 
-    function __construct(DB $db, $token) {
-        $this->db = $db;
+    function __construct($token) {
+        $this->db = App::container()->get(DB::class);
         $this->loggedin = false;
         $this->id = 0;
 
         if ($token) {
             $this->token = $token;
 
-            $id = $db->execute("SELECT id FROM users WHERE token = ?", [$this->token], true)["id"];
+            $id = $this->db->execute("SELECT id FROM users WHERE token = ?", [$this->token], true)["id"];
 
             if ($id) {
                 $this->loggedin = true;
@@ -28,7 +33,7 @@ class Auth {
         }
 
         if($this->loggedin) {
-            $this->data = $db->execute("SELECT * FROM users WHERE id = ?", [$this->id], true);
+            $this->data = $this->db->execute("SELECT * FROM users WHERE id = ?", [$this->id], true);
         }
     }
 

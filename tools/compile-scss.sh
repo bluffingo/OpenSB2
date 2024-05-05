@@ -17,4 +17,4 @@ if ! command -v sass &> /dev/null then
 fi
 
 sass_executable="sass"
-$sass_executable $common_arguments scss/:site/img/
+$sass_executable $common_arguments scss/:public/img/

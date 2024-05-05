@@ -1,6 +1,11 @@
 <?php
 // Copyright Chaziz, RGB and Bittoco 2024, all rights reserved.
 
+namespace Qobo\Framework;
+
+use PDO;
+use PDOException;
+
 class DB
 {
     private $db;
