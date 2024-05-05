@@ -28,17 +28,13 @@ session_start();
 $container = new Container();
 $router = new Router();
 
-$container->set(DB::class, function () use ($config) {
-    return new DB($config);
-});
+$container->set(DB::class, fn () => new DB($config));
 
 $container->set(Auth::class, function () {
     return new Auth((isset($_SESSION["token"]) ? $_SESSION["token"] : null));
 });
 
-$container->set(Frontend::class, function () {
-    return new Frontend();
-});
+$container->set(Frontend::class, fn () => new Frontend());
 
 $router->GET("/", [IndexController::class, "index"]);
 
