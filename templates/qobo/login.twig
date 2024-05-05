@@ -1,0 +1,19 @@
+{% extends "components/template.twig" %}
+
+{% block content %}
+<h1>Sign in on Qobo</h1>
+
+<form method="post" action="signin.php">
+<input type="hidden" name="field_command" value="login_submit">
+<div class="inputAccount">
+	<div class="label">Username:</div>
+	<input type="text" size="30" maxlength="60" name="field_login_username" value="">
+</div>
+<div class="inputAccount">
+	<div class="label">Password:</div>
+	<input type="password" size="30" maxlength="50" name="field_login_password" value="">
+</div>
+
+<input type="submit" value="Sign In">
+</form>
+{% endblock %}

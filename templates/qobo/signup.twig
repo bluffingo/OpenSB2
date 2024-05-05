@@ -1,0 +1,27 @@
+{% extends "components/template.twig" %}
+
+{% block content %}
+<h1>Sign up on Qobo</h1>
+
+<form method="post" action="signup.php">
+<input type="hidden" name="field_command" value="signup_submit">
+<div class="inputAccount">
+	<div class="label">Email:</div>
+	<input type="text" size="30" maxlength="60" name="field_signup_email" value="">
+</div>
+<div class="inputAccount">
+	<div class="label">Username:</div>
+	<input type="text" size="30" maxlength="60" name="field_signup_username" value="">
+</div>
+<div class="inputAccount">
+	<div class="label">Password:</div>
+	<input type="password" size="30" maxlength="50" name="field_signup_password_1" value="">
+</div>
+<div class="inputAccount">
+	<div class="label">Password (retype):</div>
+	<input type="password" size="30" maxlength="50" name="field_signup_password_2" value="">
+</div>
+
+<input type="submit" value="Sign Up">
+</form>
+{% endblock %}

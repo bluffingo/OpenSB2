@@ -1,5 +1,5 @@
 <?php
-// Copyright Chaziz 2024, all rights reserved.
+// Copyright Chaziz and Bittoco 2024, all rights reserved.
 
 class Auth {
     private $db;

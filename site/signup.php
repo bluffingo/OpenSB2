@@ -1,5 +1,5 @@
 <?php
-// Copyright Chaziz 2024, all rights reserved.
+// Copyright Chaziz and Bittoco 2024, all rights reserved.
 
 require_once dirname(__DIR__) . '/includes/init.php';
 
@@ -7,7 +7,7 @@ if ($auth->isLoggedIn()) {
     die("Already logged in.");
 }
 
-$invite_key = "123";
+//$invite_key = "123";
 
 if (isset($_POST["field_command"])) {
     $username = (isset($_POST['field_signup_username']) ? $_POST['field_signup_username'] : null);
@@ -32,10 +32,10 @@ if (isset($_POST["field_command"])) {
         die("Invalid email");
     }
 
-    // Check if invite key matches
-    if ($invite !== $invite_key) {
-        die("Wrong or no invite key inputted.");
-    }
+    //// Check if invite key matches
+    //if ($invite !== $invite_key) {
+    //    die("Wrong or no invite key inputted.");
+    //}
 
     $why_the_fuck_is_this_like_this = $db->execute("SELECT count(*) FROM users WHERE name = ?", [$username], true);
 

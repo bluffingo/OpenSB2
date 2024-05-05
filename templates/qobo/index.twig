@@ -9,6 +9,12 @@
 					<table width="800" cellspacing="0" cellpadding="0" border="0" align="center">
 						<tbody>
 							<tr>
+							{% if loggedIn %}
+								<td>
+									<h1>Welcome, {{ userData.name }}!</h1>
+									<p>Stats go here.</p>
+								</td>
+							{% else %}
 								<td>
 									<h1>Introducing Qobo: Your Hub for Multimedia Magic!</h1>
 									<p>Share your creative masterpieces with ease - whether it's artwork, music, or videos!</p>
@@ -21,6 +27,7 @@
 										<img src="/img/indexSignin.png">
 									</a>
 								</td>
+							{% endif %}
 							</tr>
 						</tbody>
 					</table>
@@ -33,12 +40,12 @@
 					<tbody>
 						<tr valign="top">
 							<td>
-								<a href="watch.php?v={{ submission.display_id }}">
+								<a href="view.php?id={{ submission.display_id }}">
 									<img src="img/default.png" class="submissionThumb" width="120" height="90">
 								</a>
 							</td>
 							<td width="100%">
-							<div class="submissionTitle"><a href="watch.php?v={{ submission.display_id }}">{{ submission.title }}</a></div>
+							<div class="submissionTitle"><a href="view.php?id={{ submission.display_id }}">{{ submission.title }}</a></div>
 							<div class="submissionDescription">
 								{% if submission.description %}
 								{{ submission.description }}
@@ -46,7 +53,7 @@
 								No description.
 								{% endif %}
 							</div>
-							<div class="submissionDetails"><a href="profile.php?user=Username">Username</a> | {{ submission.published | date('F j, Y') }}</div>
+							<div class="submissionDetails"><a href="profile.php?user=Username">Username</a> | {{ submission.published | qobo_date('F j, Y') }}</div>
 							</td>
 						</tr>
 					</tbody>

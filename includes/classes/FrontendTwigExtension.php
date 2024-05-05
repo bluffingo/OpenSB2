@@ -1,8 +1,14 @@
 <?php
-// Copyright Chaziz 2024, all rights reserved.
+// Copyright Chaziz and Bittoco 2024, all rights reserved.
 
 class FrontendTwigExtension extends \Twig\Extension\AbstractExtension
 {
+    private $date;
+
+    public function __construct() {
+        $this->date = new DateUtilities;
+    }
+
     //public function getFunctions()
     //{
     //}
@@ -16,7 +22,12 @@ class FrontendTwigExtension extends \Twig\Extension\AbstractExtension
             }, ['is_safe' => ['html']]),
 
             new \Twig\TwigFilter('parse_md_user_written', function ($text) {
-                return "Fuck you";
+                return "CURRENTLY UNFINISHED! (parse_md_user_written)";
+            }, ['is_safe' => ['html']]),
+
+            new \Twig\TwigFilter('qobo_date', function ($date, $parameters) {
+                $qobo_date = $this->date->actualTimeToQoboTime($date);
+                return date($parameters, $qobo_date);
             }, ['is_safe' => ['html']]),
         ];
     }

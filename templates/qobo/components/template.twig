@@ -40,12 +40,11 @@
                                 <td align="right">
                                     <div class="headerLinks alignedRight">
                                         {% if loggedIn %}
-                                            <a href="/browse.php">Browse</a>
-                                            <a href="/browse.php">Browse</a>
-                                            <a href="/browse.php">Browse</a>
+                                            <a href="profile.php?user={{ userData.name }}">{{ userData.name }}</a>
+                                            <a href="/signout.php">Sign out</a>
                                         {% else %}
-                                            <a href="/signin.php">Sign-in</a>
-                                            <a href="/signup.php">Sign-up</a>
+                                            <a href="/signin.php">Sign in</a>
+                                            <a href="/signup.php">Sign up</a>
                                         {% endif %}
                                     </div>
                                 </td>
