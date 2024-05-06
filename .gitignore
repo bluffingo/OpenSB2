@@ -4,8 +4,11 @@ composer.phar
 composer.lock
 
 # Compiled SCSS
-/site/img/poktube.css
-/site/img/qobo.css
+/public/img/poktube.css
+/public/img/qobo.css
+
+# Source maps
+/public/img/qobo.css.map
 
 # Config
 /config/config.php
