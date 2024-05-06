@@ -1,6 +1,6 @@
 {
     "name": "bittoco/qobo",
-    "description": "An early 2000s video sharing site",
+    "description": "A mid 2000s video sharing site",
     "type": "project",
     "require": {
         "twig/twig": "^3.0",

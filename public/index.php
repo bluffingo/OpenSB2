@@ -1,6 +1,6 @@
 <?php
-// Copyright Chaziz, RGB and Bittoco 2024, all rights reserved.
-include $_SERVER["DOCUMENT_ROOT"] . '../vendor/autoload.php';
+// Copyright Chaziz Multimedia Entertainment and Bittoco 2024, all rights reserved.
+include $_SERVER["DOCUMENT_ROOT"] . '/../vendor/autoload.php';
 
 use Qobo\App;
 
@@ -15,8 +15,8 @@ use Qobo\Controllers\MiscController;
 use Qobo\Controllers\WatchController;
 use Qobo\Controllers\AuthController;
 
-if (file_exists($_SERVER["DOCUMENT_ROOT"] . '../config/config.php')) {
-    $config = include $_SERVER["DOCUMENT_ROOT"] . '../config/config.php';
+if (file_exists($_SERVER["DOCUMENT_ROOT"] . '/../config/config.php')) {
+    $config = include $_SERVER["DOCUMENT_ROOT"] . '/../config/config.php';
 } else {
     // security through obscurity my favourite
     throw new Exception("Something blew up! Please contact a Bittoco developer / system administrator to resolve this issue.");
