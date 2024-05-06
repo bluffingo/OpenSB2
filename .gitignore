@@ -7,5 +7,8 @@ composer.lock
 /site/img/poktube.css
 /site/img/qobo.css
 
-# config
+# Config
 /config/config.php
+
+# MariaDB Data
+/docker/mariadb-data
