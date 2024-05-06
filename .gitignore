@@ -8,6 +8,7 @@ composer.lock
 /public/img/qobo.css
 
 # Source maps
+/public/img/poktube.css.map
 /public/img/qobo.css.map
 
 # Config

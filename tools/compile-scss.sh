@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Copyright Chaziz, RGB and Bittoco 2024, all rights reserved.
+# Copyright Chaziz Multimedia Entertainment and Bittoco 2024, all rights reserved.
 
 command=$1
 common_arguments="--style expanded --no-source-map --load-path ./"
@@ -16,5 +16,16 @@ if [ ! command -v sass &> /dev/null ]; then
     exit 1
 fi
 
-sass_executable="sass"
+# load sass.bat on windows because when you download a windows build of dart-sass,
+# the filename for it is "sass.bat".
+
+case "$(uname -s)" in
+    CYGWIN*|MINGW*|MSYS*)
+        sass_executable="sass.bat"
+        ;;
+    *)
+        sass_executable="sass"
+        ;;
+esac
+
 $sass_executable $common_arguments scss/:public/img/
