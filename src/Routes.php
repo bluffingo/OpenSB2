@@ -14,7 +14,7 @@ use Qobo\Framework\Router;
 
 use Qobo\Controllers\IndexController;
 use Qobo\Controllers\MiscController;
-use Qobo\Controllers\WatchController;
+use Qobo\Controllers\ViewController;
 use Qobo\Controllers\AuthController;
 
 $router = new Router();
@@ -25,7 +25,7 @@ $router->GET("/help.php", [MiscController::class, "help"]);
 $router->GET("/guidelines.php", [MiscController::class, "guidelines"]);
 $router->GET("/privacy.php", [MiscController::class, "privacy"]);
 
-$router->GET("/watch.php", [WatchController::class, "watch"]);
+$router->GET("/view.php", [ViewController::class, "view"]);
 
 $router->GET("/signin.php", [AuthController::class, "signin"])->useMiddleware("guest");
 $router->POST("/signin.php", [AuthController::class, "signin_post"])->useMiddleware("guest");

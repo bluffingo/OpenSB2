@@ -10,6 +10,10 @@ div, td {
   font-size: 12px;
 }
 
+img, video {
+  max-width: 100%;
+}
+
 a:active, a:link, a:visited {
   color: #1f40a0;
   text-decoration: none;

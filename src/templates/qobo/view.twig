@@ -1,0 +1,18 @@
+{% extends "components/template.twig" %}
+
+{% block content %}
+<table class="submission-layout" width="800" height="100">
+    <tbody>
+        <td>
+            {% if submission.type == "video" %}
+                <video src="/dynamic/qobo_test.mp4">
+                    <span>your browser doesn't support HTML5 video</span>
+                </video>
+            {% endif %}
+        </td>
+        <td>
+            <h2>{{ submission.title }}</h2>
+        </td>
+    </tbody>
+</table>
+{% endblock %}

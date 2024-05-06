@@ -11,7 +11,7 @@ if [ "$command" = "dev" ]; then
 fi
 
 # check if SASS is in path.
-if ! command -v sass &> /dev/null then
+if [ ! command -v sass &> /dev/null ]; then
     echo "ERROR: sass is not installed on this system. check if it's in your PATH"
     exit 1
 fi
