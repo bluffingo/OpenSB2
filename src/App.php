@@ -1,4 +1,4 @@
-<?php 
+<?php
 // Copyright Chaziz Multimedia Entertainment and Bittoco 2024, all rights reserved.
 
 namespace Qobo;
@@ -41,11 +41,11 @@ class App {
     }
 
     public static function run(Container $container, Router $router) {
-        // get server info
-        $uri = parse_url($_SERVER["REQUEST_URI"])["path"];
-        $method = $_SERVER['REQUEST_METHOD'];
-
-        self::setContainer($container);
-        $router->run($uri, $method);      
+        try {
+            self::setContainer($container);
+            $router->run(parse_url($_SERVER["REQUEST_URI"])["path"], $_SERVER['REQUEST_METHOD']);
+        } catch (\Exception $error) {
+            die('<pre>QoboFramework: Something went very wrong. Error:</pre> <pre>'. $error->getMessage() . '</pre>');
+        }
     }
 }

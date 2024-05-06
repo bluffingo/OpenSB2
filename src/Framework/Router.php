@@ -1,10 +1,9 @@
-<?php 
+<?php
 // Copyright Chaziz Multimedia Entertainment and Bittoco 2024, all rights reserved.
 
 namespace Qobo\Framework;
 
 use Qobo\App;
-use Qobo\Framework\Controller;
 
 class Router {
     private $routes = [];
@@ -31,11 +30,11 @@ class Router {
     public function PUT(string $uri, $controller) {
         return $this->addRoute("PUT", $uri, $controller);
     }
- 
+
     public function PATCH(string $uri, $controller) {
         return $this->addRoute("PATCH", $uri, $controller);
     }
- 
+
     public function DELETE(string $uri, $controller) {
         return $this->addRoute("DELETE", $uri, $controller);
     }

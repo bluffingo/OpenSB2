@@ -12,7 +12,7 @@ class Guest extends Middleware {
         $authService = App::container()->get(Auth::class);
 
         if ($authService->isLoggedIn()) {
-            die("Already logged in");
+            header("Location: /");
         }
     }
 }

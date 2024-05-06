@@ -13,7 +13,7 @@ class Auth {
     private $data;
     private $id;
 
-    function __construct($token) {
+    public function __construct($token) {
         $this->db = App::container()->get(DB::class);
         $this->loggedin = false;
         $this->id = 0;
@@ -43,5 +43,27 @@ class Auth {
 
     public function getUserData() {
         return $this->data;
+    }
+
+    public function signIn(string $username, string $password) {
+        $login = $this->db->execute("SELECT id, passhash, token FROM users WHERE name = ?", [ $username ], true);
+
+        if ($login) {
+            // check hashes
+            $verify = password_verify($password, $login['passhash']);
+
+            if ($verify) {
+                $_SESSION['token'] = $login['token'];
+
+                return [
+                    "success" => true
+                ];
+            }
+        }
+
+        return [
+            "success" => false,
+            "error" => "Invalid username / password."
+        ];
     }
 }
