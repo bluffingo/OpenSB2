@@ -10,7 +10,7 @@ div, td {
   font-size: 12px;
 }
 
-img, video {
+video {
   max-width: 100%;
 }
 
@@ -111,6 +111,17 @@ img {
   color: #888;
 }
 
+.submissionLayout .submissionTitle {
+  font-size: 16px;
+  font-weight: bold;
+}
+.submissionLayout .submissionDescription {
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
 .inputAccount {
   margin-bottom: 10px;
 }
+
+/*# sourceMappingURL=qobo.css.map */

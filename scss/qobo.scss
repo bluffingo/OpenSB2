@@ -13,7 +13,7 @@ div, td {
     font-size: 12px
 }
 
-img, video {
+video {
     max-width: 100%;
 }
 
@@ -113,6 +113,18 @@ img {
     .submissionDetails {
         font-size: 12px;
         color: #888;
+    }
+}
+
+.submissionLayout {
+    .submissionTitle {
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    .submissionDescription {
+        margin-top: 2px;
+        margin-bottom: 2px;
     }
 }
 
