@@ -4,6 +4,7 @@
 namespace Qobo\Framework;
 
 use Qobo\App;
+use Qobo\Framework\Controller;
 
 class Router {
     private $routes = [];
@@ -55,15 +56,17 @@ class Router {
                         $reflectedMethod = new \ReflectionMethod($controller, $method);
 
                         if ($reflectedMethod->isPublic() && (!$reflectedMethod->isAbstract())) {
-                            if ($reflectedMethod->isStatic()) {
-                                return forward_static_call_array([$controller, $method], []);
-                            } else {
-                                $controller = new $controller();
+                            $controller = new $controller();
 
-                                return call_user_func_array([$controller, $method], []);
+                            if (!($controller instanceof Controller)) {
+                                throw new \Exception("This controller doesn't extend the Qobo\Framework\Controller class.");
                             }
+
+                            return call_user_func_array([$controller, $method], []);
                         }
-                    } catch (\ReflectionException $reflectionException) {}
+                    } catch (\ReflectionException $reflectionException) {
+                        throw new \Exception("Invalid controller.");
+                    }
                 }
             }
         }
