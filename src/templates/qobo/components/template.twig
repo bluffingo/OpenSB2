@@ -41,6 +41,7 @@
                                     <div class="headerLinks alignedRight">
                                         {% if loggedIn %}
                                             <a href="profile.php?user={{ userData.name }}">{{ userData.name }}</a>
+                                            <a href="/upload.php">Upload</a>
                                             <a href="/signout.php">Sign out</a>
                                         {% else %}
                                             <a href="/signin.php">Sign in</a>

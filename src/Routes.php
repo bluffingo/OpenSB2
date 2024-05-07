@@ -16,6 +16,8 @@ use Qobo\Controllers\IndexController;
 use Qobo\Controllers\MiscController;
 use Qobo\Controllers\ViewController;
 use Qobo\Controllers\AuthController;
+use Qobo\Controllers\UploadController;
+
 
 $router = new Router();
 
@@ -32,5 +34,8 @@ $router->POST("/signin.php", [AuthController::class, "signin_post"])->useMiddlew
 $router->GET("/signup.php", [AuthController::class, "signup"])->useMiddleware("guest");
 $router->POST("/signup.php", [AuthController::class, "signup_post"])->useMiddleware("guest");
 $router->GET("/signout.php", [AuthController::class, "signout"])->useMiddleware("loggedIn");
+
+$router->GET("/upload.php", [UploadController::class, "upload"])->useMiddleware("loggedIn");
+$router->POST("/upload.php", [UploadController::class, "upload_post"])->useMiddleware("loggedIn");
 
 return $router;
