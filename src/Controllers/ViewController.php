@@ -9,14 +9,17 @@ class ViewController extends Controller {
     public function view() {
         $id = $_GET["id"];
 
+        // placeholder, this should redirect to the homepage while showing an error banner,
+        // akin to vidlii and opensb.
         if (!isset($id)) {
-            die("This mf forgot The Id!!!! 😂😂😂😂😂😂 #YouAreStupid");
+            throw new \Exception("Missing submission id.");
         }
 
         $submission = $this->db->execute("SELECT * FROM submissions where display_id = ?", [$id], true);
 
+        // ditto.
         if (!$submission) {
-            die("Doesn't exist. So does the error page. Wow.");
+            throw new \Exception("This submission does not exist.");
         }
 
         $this->frontend->render("view", [

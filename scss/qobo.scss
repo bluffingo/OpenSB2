@@ -43,6 +43,15 @@ img {
     border: 0; // ie6 and ff 0.8 put borders by default for a stupid reason
 }
 
+hr {
+    border: 0;
+    border-top: 1px solid $border-color;
+}
+
+.avatar {
+    border: 1px solid $border-color;
+}
+
 .headerOne {
     /* todo */
 }
@@ -127,6 +136,13 @@ img {
         margin-top: 2px;
         margin-bottom: 2px;
     }
+}
+
+// profile page
+.profileTitle {
+    font-size: 14px;
+    font-weight: bold;
+    padding-bottom: 2px;
 }
 
 // signup/login

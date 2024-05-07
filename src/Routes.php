@@ -17,6 +17,7 @@ use Qobo\Controllers\MiscController;
 use Qobo\Controllers\ViewController;
 use Qobo\Controllers\AuthController;
 use Qobo\Controllers\UploadController;
+use Qobo\Controllers\ProfileController;
 
 
 $router = new Router();
@@ -28,6 +29,7 @@ $router->GET("/guidelines.php", [MiscController::class, "guidelines"]);
 $router->GET("/privacy.php", [MiscController::class, "privacy"]);
 
 $router->GET("/view.php", [ViewController::class, "view"]);
+$router->GET("/profile.php", [ProfileController::class, "profile"]);
 
 $router->GET("/signin.php", [AuthController::class, "signin"])->useMiddleware("guest");
 $router->POST("/signin.php", [AuthController::class, "signin_post"])->useMiddleware("guest");
