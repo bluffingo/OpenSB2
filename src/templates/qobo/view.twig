@@ -4,16 +4,16 @@
 <table class="submissionLayout" width="800" cellspacing="5" height="100">
     <tbody>
         <tr valign="top">
-            <td width="50%">
+            <td width="500">
                 <div>
                     {% if submission.type == "video" %}
                     <video src="/dynamic/qobo_test.mp4" controls> {# TODO: placeholder #}
-                        <span>Your browser doesn't support the HTML5 video tag or Adobe Flash</span>
+                        <span>Your browser doesn't support the HTML5 video tag or Macromedia Flash.</span>
                     </video>
                     {% endif %}
                 </div>
             </td>
-            <td align="left">
+            <td width="300">
                 <div>
                     <h2 class="submissionTitle">{{ submission.title }}</h2>
                     <div class="submissionDescription">

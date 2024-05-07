@@ -14,9 +14,17 @@ class FrontendTwigExtension extends \Twig\Extension\AbstractExtension
         $this->date = new DateUtilities();
     }
 
-    //public function getFunctions()
-    //{
-    //}
+    public function getFunctions()
+    {
+        return [
+            new \Twig\TwigFunction('wayback_url', function ($url) {
+                $date = $this->date->currentQoboTimeToWaybackMachineURLDate();
+                $time = date("His", time());
+
+                return "http://web.archive.org/web/$date$time/$url";
+            }, ['is_safe' => ['html']])
+        ];
+    }
 
     public function getFilters()
     {

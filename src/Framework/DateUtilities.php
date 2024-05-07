@@ -12,6 +12,12 @@ class DateUtilities {
         return strtotime('-20 year', time());
     }
 
+    // how should these be named?
+    public function currentQoboTimeToWaybackMachineURLDate() {
+        $currentQoboTime = strtotime('-20 year', time());
+        return date('Ymd', $currentQoboTime);
+    }
+
     public function qoboTimeToActualTime($time) {
         return strtotime('+20 year', $time);
     }

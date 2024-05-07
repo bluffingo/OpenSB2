@@ -69,6 +69,12 @@
                             <a href="/help.php">Help</a>
                             |
                             <a href="/privacy.php">Privacy</a>
+                            <br><br>
+                            {# it should've pointed towards macromedia.com/go/getflashplayer, but it leads to a page on macromedia's site
+                            that likely worked by detecting the user agent server-side, so the wayback archive is broken. #}
+                            <a href="{{ wayback_url("http://www.macromedia.com/shockwave/download/alternates/") }}">
+                                <img src="/img/buttons/get_flash_player.gif">
+                            </a>
                         </div>
                     </td>
                 </tr>
