@@ -95,6 +95,10 @@ hr {
     padding: 15px 0;
 }
 
+.input {
+    margin-bottom: 10px;
+}
+
 // index
 .introduction {
     margin-bottom: 10px;
@@ -145,7 +149,14 @@ hr {
     padding-bottom: 2px;
 }
 
-// signup/login
-.inputAccount {
-    margin-bottom: 10px;
+// migrate squarebracket page
+.migrateHeader {
+    padding-bottom: 6px;
+    border-bottom: 1px solid $border-color;
+    text-align: center;
+
+    h1 {
+        font-size: 18px;
+        margin-bottom: 6px;
+    }
 }

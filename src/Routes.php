@@ -18,7 +18,7 @@ use Qobo\Controllers\ViewController;
 use Qobo\Controllers\AuthController;
 use Qobo\Controllers\UploadController;
 use Qobo\Controllers\ProfileController;
-
+use Qobo\Controllers\SbMigrateController;
 
 $router = new Router();
 
@@ -39,5 +39,8 @@ $router->GET("/signout.php", [AuthController::class, "signout"])->useMiddleware(
 
 $router->GET("/upload.php", [UploadController::class, "upload"])->useMiddleware("loggedIn");
 $router->POST("/upload.php", [UploadController::class, "upload_post"])->useMiddleware("loggedIn");
+
+$router->GET("/migrate.php", [SbMigrateController::class, "migrate"])->useMiddleware("loggedIn");
+$router->POST("/migrate.php", [SbMigrateController::class, "migrate_post"])->useMiddleware("loggedIn");
 
 return $router;

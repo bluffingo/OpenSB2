@@ -4,7 +4,25 @@
 <h1>Upload</h1>
 
 <form method="post" action="upload.php">
-<p>Placeholder</p>
+<div class="input">
+    <div class="label">Title:</div>
+    <input type="text" maxlength="128" name="field_upload_title" value="">
+</div>
+
+<div class="input">
+    <div class="label">Tags:</div>
+    <input type="text" maxlength="1024" name="field_upload_tags" value="">
+</div>
+
+<div class="input">
+    <div class="label">Description:</div>
+    <textarea name="field_upload_description" rows="4" cols="80"></textarea>
+</div>
+
+<div class="input">
+    <div class="label">File:</div>
+    <input type="file" name="field_upload_file"/>
+</div>
 
 <input type="submit" value="Upload">
 </form>
