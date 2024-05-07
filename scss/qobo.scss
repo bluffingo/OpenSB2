@@ -1,5 +1,8 @@
 $font: Arial, Helvetica, sans-serif;
-$border-color: #ddd;
+$border-color: #000;
+$title-color: #af6eb7;
+$content-color: #d4afdb;
+$content-color-2: #ffffff;
 
 body {
     background-color: #fff;
@@ -48,18 +51,57 @@ hr {
     border-top: 1px solid $border-color;
 }
 
+form {
+    margin: 0;
+}
+
+// essentials
 .avatar {
     border: 1px solid $border-color;
 }
 
-.headerOne {
-    /* todo */
+.input {
+    margin-bottom: 10px;
 }
 
-.headerTwo {
-    border-bottom: 1px solid $border-color;
+.titleBg {
+    background-color: $title-color;
+    color: white;
+    font-weight: bold;
+}
+
+.contentBg {
+    background-color: $content-color;
+}
+
+.contentBgWhite {
+    background-color: $content-color-2;
+}
+
+.tableBg {
+    background-color: $border-color;
+}
+
+.center {
+    text-align: center;
+}
+
+// header and footer
+
+.header {
+    border-bottom: 1px solid #ddd;
     padding: 5px 0;
     margin-bottom: 10px;
+}
+
+.headerLogo {
+    // in my testing this works on firefox 0.8, but not ie 6 or opera 7.50.
+    &:hover {
+        filter: alpha(opacity=50);
+        -moz-opacity: 0.5;
+        -khtml-opacity: 0.5;
+        opacity: 0.5;
+    }
 }
 
 .headerLinks {
@@ -90,13 +132,9 @@ hr {
 
 .footer {
     text-align: center;
-    border-top: 1px solid $border-color;
+    border-top: 1px solid #ddd;
     margin-top: 10px;
     padding: 15px 0;
-}
-
-.input {
-    margin-bottom: 10px;
 }
 
 // index
@@ -139,24 +177,5 @@ hr {
     .submissionDescription {
         margin-top: 2px;
         margin-bottom: 2px;
-    }
-}
-
-// profile page
-.profileTitle {
-    font-size: 14px;
-    font-weight: bold;
-    padding-bottom: 2px;
-}
-
-// migrate squarebracket page
-.migrateHeader {
-    padding-bottom: 6px;
-    border-bottom: 1px solid $border-color;
-    text-align: center;
-
-    h1 {
-        font-size: 18px;
-        margin-bottom: 6px;
     }
 }

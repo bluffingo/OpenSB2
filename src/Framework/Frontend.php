@@ -29,6 +29,5 @@ class Frontend {
     function render($name, $array = []) {
         $template = $this->twig->load($name . '.twig');
         echo $template->render($array);
-        print_r($this->db->getAllQueries());
     }
 }

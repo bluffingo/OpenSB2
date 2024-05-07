@@ -1,25 +1,36 @@
 {% extends "components/template.twig" %}
 
 {% block content %}
-<h1>Sign in on Qobo</h1>
-
 {% if error %}
 <span style="color: red;">{{ error }}</span>
 {% endif %}
 
-<form method="post" action="signin.php">
-    <input type="hidden" name="field_command" value="login_submit">
+<table class="tableBg" width="400" cellspacing="1" cellpadding="4" align="center">
+    <tbody>
+        <tr class="titleBg">
+            <td colspan="2">
+				Sign in on Qobo
+            </td>
+        </tr>
+        <tr>
+            <td class="contentBg">
+                <form method="post" action="signin.php">
+                    <input type="hidden" name="field_command" value="login_submit">
 
-    <div class="input">
-	    <div class="label">Username:</div>
-	    <input type="text" size="30" maxlength="60" name="field_login_username" value="">
-    </div>
+                    <div class="input">
+                        <div class="label">Username:</div>
+                        <input type="text" size="30" maxlength="60" name="field_login_username" value="">
+                    </div>
 
-    <div class="input">
-	    <div class="label">Password:</div>
-	    <input type="password" size="30" maxlength="50" name="field_login_password" value="">
-    </div>
+                    <div class="input">
+                        <div class="label">Password:</div>
+                        <input type="password" size="30" maxlength="50" name="field_login_password" value="">
+                    </div>
 
-    <input type="submit" value="Sign In">
-</form>
+                    <input type="submit" value="Sign In">
+                </form>
+            </td>
+        </tr>
+    </tbody>
+</table>
 {% endblock %}

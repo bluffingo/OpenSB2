@@ -1,23 +1,38 @@
 {% extends "components/template.twig" %}
 
 {% block content %}
-<table class="profileLayout" width="800" cellspacing="5" height="100">
+<table class="tableBg" width="800" cellspacing="1" cellpadding="4">
     <tbody>
-        <tr valign="top">
-            <td width="200" align="center">
-                <div>
-                    <div class="profileTitle">{{ profile.name }}</div>
-                    <img src="/img/avatar.png" width="96" class="avatar">
-                </div>
+        <tr class="titleBg">
+            <td colspan="2">
+                 {{ profile.name }}
             </td>
+        </tr>
+        <tr class="contentBg" valign="top">
             <td>
-                <div>
-                    <h1>About this user</h1>
-                    <hr>
-                    <p>
-                        Placeholder.
-                    </p>
-                </div>
+                <table width="100%">
+                    <tbody>
+                        <tr>
+                            <td><b>Name:</b></td>
+                            <td>{{ profile.name }}</td>
+                        </tr>
+                        <tr>
+                            <td><b>Uploads:</b></td>
+                            <td>123456789 (placeholder)</td>
+                        </tr>
+                        <tr>
+                            <td><b>Registered:</b></td>
+                            <td>Mayvember 32st 5259</td>
+                        </tr>
+                        <tr>
+                            <td><b>Last Seen:</b></td>
+                            <td><b>Today</b> at 12:34:56 PM</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+            <td width="128" align="center">
+                <img src="/img/avatar.png" width="96" class="avatar">
             </td>
         </tr>
     </tbody>
