@@ -16,10 +16,19 @@ use Qobo\Framework\Frontend;
 class Controller {
     public $db;
     public $frontend;
+    public $sbdb;
     
     public function __construct() {
         $this->db = App::container()->get(DB::class);
         $this->frontend = App::container()->get(Frontend::class);
+
+        // this is shit. i know. -chaziz 5/7/2024
+        try {
+            $this->sbdb = App::container()->get("sb_db");
+        } catch (\Exception $e) {
+            $this->sbdb = null;
+        }
+        
     }
 
     public function returnJSON(object $data) {

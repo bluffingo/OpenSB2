@@ -13,12 +13,12 @@ class DB
 
     function __construct($config)
     {
-        $connection = 'mysql:dbname=' . $config["mysql"]["database"] . ';host=' . $config["mysql"]["host"];
+        $connection = 'mysql:dbname=' . $config["database"] . ';host=' . $config["host"];
 
         $this->allQueries = [];
 
         try {
-            $this->db = new PDO($connection, $config["mysql"]["username"], $config["mysql"]["password"]);
+            $this->db = new PDO($connection, $config["username"], $config["password"]);
         } catch (PDOException $e) {
             die('DB fail: ' . $e);
         }
