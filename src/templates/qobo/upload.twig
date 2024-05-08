@@ -10,7 +10,7 @@
         </tr>
         <tr>
             <td class="contentBg">
-                <form method="post" action="upload.php">
+                <form method="post" action="upload.php" id="upload_form">
                 <div class="input">
                     <div class="label">Title:</div>
                     <input type="text" maxlength="128" name="field_upload_title" value="">
@@ -29,6 +29,16 @@
                 <div class="input">
                     <div class="label">File:</div>
                     <input type="file" name="field_upload_file"/>
+                </div>
+
+                <div class="input">
+                    <div class="label">Category:</div>
+                    <select id="category" form="upload_form">
+                    <option value="video">Video</option>
+                    <option value="image">Image</option>
+                    <option value="music">Music</option>
+                    <option value="flash">Flash</option>
+                    </select>
                 </div>
 
                 <input type="submit" value="Upload">

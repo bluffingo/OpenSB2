@@ -11,6 +11,7 @@ class UploadController extends Controller {
     }
 
     public function upload_post() {
+        // TODO: queue
         throw new \Exception("This is currently not implemented.");
     }
 }
