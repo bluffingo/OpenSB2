@@ -19,6 +19,7 @@ use Qobo\Controllers\AuthController;
 use Qobo\Controllers\UploadController;
 use Qobo\Controllers\ProfileController;
 use Qobo\Controllers\SbMigrateController;
+use Qobo\Controllers\BrowseController;
 
 $router = new Router();
 
@@ -28,6 +29,7 @@ $router->GET("/help.php", [MiscController::class, "help"]);
 $router->GET("/guidelines.php", [MiscController::class, "guidelines"]);
 $router->GET("/privacy.php", [MiscController::class, "privacy"]);
 
+$router->GET("/browse.php", [BrowseController::class, "browse"]);
 $router->GET("/view.php", [ViewController::class, "view"]);
 $router->GET("/profile.php", [ProfileController::class, "profile"]);
 

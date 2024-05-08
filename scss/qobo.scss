@@ -1,6 +1,7 @@
 $font: Arial, Helvetica, sans-serif;
 $border-color: #000;
 $title-color: #af6eb7;
+$title-color-2: #7c3a85;
 $content-color: #d4afdb;
 $content-color-2: #ffffff;
 
@@ -56,6 +57,10 @@ form {
 }
 
 // essentials
+.textSmall {
+    font-size: x-small;
+}
+
 .avatar {
     border: 1px solid $border-color;
 }
@@ -66,6 +71,12 @@ form {
 
 .titleBg {
     background-color: $title-color;
+    color: white;
+    font-weight: bold;
+}
+
+.titleBgDark {
+    background-color: $title-color-2;
     color: white;
     font-weight: bold;
 }

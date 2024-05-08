@@ -10,61 +10,40 @@
         </tr>
 		<tr>
 			<td class="contentBg" width="48" align="center">
-				<img src="/img/icons/video.png">
-			</td>
-			<td class="contentBgWhite">
-				Videos
-			</td>
-		</tr>
-		<tr>
-			<td class="contentBg" width="48" align="center">
-				<img src="/img/icons/image.png">
-			</td>
-			<td class="contentBgWhite">
-				Images
-			</td>
-		</tr>
-		<tr>
-			<td class="contentBg" width="48" align="center">
-				<img src="/img/icons/music.png">
-			</td>
-			<td class="contentBgWhite">
-				Music
-			</td>
-		</tr>
-	</tbody>
-</table>
-
-<div>
-{% if submissions %}
-{% for submission in submissions %}
-<div class="submission">
-<table cellspacing="0" cellpadding="0" border="0">
-	<tbody>
-		<tr valign="top">
-			<td>
-				<a href="view.php?id={{ submission.display_id }}">
-					<img src="img/default.png" class="submissionThumb" width="120" height="90">
+				<a href="/browse.php?category=video">
+					<img src="/img/icons/video.png">
 				</a>
 			</td>
-			<td width="100%">
-			<div class="submissionTitle"><a href="view.php?id={{ submission.display_id }}">{{ submission.title }}</a></div>
-			<div class="submissionDescription">
-				{% if submission.description %}
-				{{ submission.description }}
-				{% else %}
-				No description.
-				{% endif %}
-			</div>
-			<div class="submissionDetails"><a href="profile.php?user=Username">Username</a> | {{ submission.published | qobo_date('F j, Y') }}</div>
+			<td class="contentBgWhite">
+				<a href="/browse.php?category=video">
+					Videos
+				</a>
+			</td>
+		</tr>
+		<tr>
+			<td class="contentBg" width="48" align="center">
+				<a href="/browse.php?category=image">
+					<img src="/img/icons/image.png">
+				</a>
+			</td>
+			<td class="contentBgWhite">
+				<a href="/browse.php?category=image">
+					Images
+				</a>
+			</td>
+		</tr>
+		<tr>
+			<td class="contentBg" width="48" align="center">
+				<a href="/browse.php?category=music">
+					<img src="/img/icons/music.png">
+				</a>
+			</td>
+			<td class="contentBgWhite">
+				<a href="/browse.php?category=music">
+					Music
+				</a>
 			</td>
 		</tr>
 	</tbody>
 </table>
-</div>
-{% endfor %}
-{% else %}
-No submissions.
-{% endif %}	
-</div>
 {% endblock %}

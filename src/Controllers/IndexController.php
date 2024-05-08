@@ -7,10 +7,8 @@ use Qobo\Framework\Controller;
 
 class IndexController extends Controller {
     public function index() {
-        $submissions = $this->db->execute("SELECT * FROM submissions LIMIT 10");
+        //uh, nothing.
 
-        return $this->frontend->render("index", [
-            'submissions' => $submissions,
-        ]);
+        return $this->frontend->render("index");
     }
 }
