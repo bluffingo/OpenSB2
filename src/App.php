@@ -28,8 +28,8 @@ class App {
         (new $middleware)->handle($uri, $method);
     }
 
-    private static function setContainer(Container $container) {
-        static::$container = $container;
+    private static function cleanup() {
+        unset($_SESSION["__flash"]);
     }
 
     public static function container() {
@@ -42,10 +42,12 @@ class App {
 
     public static function run(Container $container, Router $router) {
         try {
-            self::setContainer($container);
+            static::$container = $container;
             $router->run(parse_url($_SERVER["REQUEST_URI"])["path"], $_SERVER['REQUEST_METHOD']);
         } catch (\Exception $error) {
             die('<pre>QoboFramework: Something went very wrong. Error:</pre> <pre>'. $error->getMessage() . '</pre>');
         }
+
+        self::cleanup();
     }
 }
