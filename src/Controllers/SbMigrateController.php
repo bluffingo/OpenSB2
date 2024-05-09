@@ -5,7 +5,7 @@ namespace Qobo\Controllers;
 
 use Qobo\Framework\Controller;
 
-class SbMigrateController extends Controller {
+class SBMigrateController extends Controller {
     public function migrate() {
         return $this->frontend->render("migrate");
     }

@@ -3,6 +3,8 @@
 
 namespace Qobo\Framework;
 
+use \SimpleXMLElement;
+
 use Qobo\App;
 use Qobo\Framework\DB;
 use Qobo\Framework\Frontend;
@@ -34,6 +36,25 @@ class Controller {
     public function returnJSON(object $data) {
         header('Content-Type: application/json');
         echo json_encode($data);
+    }
+
+    // https://stackoverflow.com/a/5965940 (but modified)
+    public function returnXML( $data ) {
+        $xml_data = new SimpleXMLElement('<?xml version="1.0"?><data></data>');
+
+        foreach( $data as $key => $value ) {
+            if( is_array($value) ) {
+                if( is_numeric($key) ){
+                    $key = 'item'.$key; //dealing with <0/>..<n/> issues
+                }
+                $subnode = $xml_data->addChild($key);
+                $this->array_to_xml($value, $subnode);
+            } else {
+                $xml_data->addChild("$key",htmlspecialchars("$value"));
+            }
+        }
+
+        return $xml_data->asXML();
     }
 
     public function redirect(string $url) {

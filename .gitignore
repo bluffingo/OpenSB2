@@ -16,3 +16,8 @@ composer.lock
 
 # MariaDB Data
 /docker/mariadb-data
+
+# Video flash player (the swf should be manually copied to img for now)
+/flash/player.html
+/flash/player.swd
+/flash/player.swf

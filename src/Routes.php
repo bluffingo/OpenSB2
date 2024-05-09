@@ -10,6 +10,7 @@
  * All controllers are in ``src/Controller``. Dynamic routing still hasn't been implemented because i'm a lazy bitch
  */
 
+use Qobo\Controllers\XMLController;
 use Qobo\Framework\Router;
 
 use Qobo\Controllers\IndexController;
@@ -42,7 +43,9 @@ $router->GET("/signout.php", [AuthController::class, "signout"])->useMiddleware(
 $router->GET("/upload.php", [UploadController::class, "upload"])->useMiddleware("loggedIn");
 $router->POST("/upload.php", [UploadController::class, "upload_post"])->useMiddleware("loggedIn");
 
-$router->GET("/migrate.php", [SbMigrateController::class, "migrate"])->useMiddleware("loggedIn");
-$router->POST("/migrate.php", [SbMigrateController::class, "migrate_post"])->useMiddleware("loggedIn");
+$router->GET("/migrate.php", [SBMigrateController::class, "migrate"])->useMiddleware("loggedIn");
+$router->POST("/migrate.php", [SBMigrateController::class, "migrate_post"])->useMiddleware("loggedIn");
+
+$router->GET("/xml/get_video.php", [XMLController::class, "getVideoForFlash"]);
 
 return $router;
