@@ -10,7 +10,6 @@
  * All controllers are in ``src/Controller``. Dynamic routing still hasn't been implemented because i'm a lazy bitch
  */
 
-use Qobo\Controllers\XMLController;
 use Qobo\Framework\Router;
 
 use Qobo\Controllers\IndexController;
@@ -19,8 +18,9 @@ use Qobo\Controllers\ViewController;
 use Qobo\Controllers\AuthController;
 use Qobo\Controllers\UploadController;
 use Qobo\Controllers\ProfileController;
-use Qobo\Controllers\SbMigrateController;
+use Qobo\Controllers\SBMigrateController;
 use Qobo\Controllers\BrowseController;
+use Qobo\Controllers\XMLController;
 
 $router = new Router();
 
