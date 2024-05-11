@@ -7,11 +7,9 @@ use Qobo\Framework\Controller;
 
 // this is for xml stuff.
 class XMLController extends Controller {
-
     // returns dummy data.
     public function getVideoForFlash() {
         $id = $_GET["id"]; // the flash player currently hardcodes this to "test".
-        header('Content-Type: application/xml');
 
         // TODOS:
         // 1. don't hardcode the domain, i know there's a way but i don't care right now.

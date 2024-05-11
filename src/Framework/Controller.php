@@ -11,7 +11,7 @@ use Qobo\Framework\Frontend;
 
 /**
  * QoboFramework Controller.
- * 
+ *
  * This is a base class that you can extend to make a valid controller for your route.
  * @author RGB
  */
@@ -19,7 +19,7 @@ class Controller {
     public $db;
     public $frontend;
     public $sbdb;
-    
+
     public function __construct() {
         $this->db = App::container()->get(DB::class);
         $this->frontend = App::container()->get(Frontend::class);
@@ -30,7 +30,7 @@ class Controller {
         } catch (\Exception $e) {
             $this->sbdb = null;
         }
-        
+
     }
 
     public function returnJSON(object $data) {
@@ -40,6 +40,8 @@ class Controller {
 
     // https://stackoverflow.com/a/5965940 (but modified)
     public function returnXML( $data ) {
+        header('Content-Type: application/xml');
+
         $xml_data = new SimpleXMLElement('<?xml version="1.0"?><data></data>');
 
         foreach( $data as $key => $value ) {
