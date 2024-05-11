@@ -7,13 +7,7 @@ use Qobo\Helpers\Profiler;
 
 Profiler::start();
 
-if (file_exists($_SERVER["DOCUMENT_ROOT"] . '/../config/config.php')) {
-    $config = include_once $_SERVER["DOCUMENT_ROOT"] . '/../config/config.php';
-} else {
-    // security through obscurity my favourite
-    throw new Exception("Something blew up! Please contact a Bittoco developer / system administrator to resolve this issue.");
-}
-
+$config = include_once $_SERVER["DOCUMENT_ROOT"] . '/../config/config.php';
 
 session_name("qobosession");
 session_start();

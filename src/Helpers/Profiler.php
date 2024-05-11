@@ -3,6 +3,8 @@
 
 namespace Qobo\Helpers;
 
+// people: how bad of a profiler can you make
+// me:
 class Profiler {
     protected static $startTime;
 
