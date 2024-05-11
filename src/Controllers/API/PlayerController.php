@@ -1,15 +1,19 @@
 <?php
 // Copyright Chaziz Multimedia Entertainment and Bittoco 2024, all rights reserved.
 
-namespace Qobo\Controllers;
+namespace Qobo\Controllers\API;
 
 use Qobo\Framework\Controller;
 
 // this is for xml stuff.
-class XMLController extends Controller {
+class PlayerController extends Controller {
     // returns dummy data.
-    public function getVideoForFlash() {
-        $id = $_GET["id"]; // the flash player currently hardcodes this to "test".
+    public function getVideo() {
+        $id = $_GET["id"] ?? null; // the flash player currently hardcodes this to "test".
+
+        if ($id == null) {
+            throw new \Exception("Fucking aids");
+        }
 
         // TODOS:
         // 1. don't hardcode the domain, i know there's a way but i don't care right now.

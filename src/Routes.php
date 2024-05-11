@@ -20,7 +20,7 @@ use Qobo\Controllers\UploadController;
 use Qobo\Controllers\ProfileController;
 use Qobo\Controllers\SBMigrateController;
 use Qobo\Controllers\BrowseController;
-use Qobo\Controllers\XMLController;
+use Qobo\Controllers\API\PlayerController;
 
 $router = new Router();
 
@@ -43,9 +43,16 @@ $router->GET("/signout.php", [AuthController::class, "signout"])->useMiddleware(
 $router->GET("/upload.php", [UploadController::class, "upload"])->useMiddleware("loggedIn");
 $router->POST("/upload.php", [UploadController::class, "upload_post"])->useMiddleware("loggedIn");
 
-$router->GET("/migrate.php", [SBMigrateController::class, "migrate"])->useMiddleware("loggedIn");
-$router->POST("/migrate.php", [SBMigrateController::class, "migrate_post"])->useMiddleware("loggedIn");
+if(!is_null($config["opensb_mysql"]["database"])) {
+    $router->GET("/migrate.php", [SBMigrateController::class, "migrate"])->useMiddleware("loggedIn");
+    $router->POST("/migrate.php", [SBMigrateController::class, "migrate_post"])->useMiddleware("loggedIn");
+} else {
+    $router->GET("/migrate.php", function () {
+        http_response_code(400);
+        echo "Migration is turned off on this instance";
+    })->useMiddleware("loggedIn");
+}
 
-$router->GET("/xml/get_video.php", [XMLController::class, "getVideoForFlash"]);
+$router->GET("/api/player/get_video.php", [PlayerController::class, "getVideo"]);
 
 return $router;
