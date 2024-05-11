@@ -9,16 +9,8 @@
             </td>
         </tr>
         <tr valign="top">
-            <td class="contentBgWhite" width="500">
-                <div>
-                    {% if submission.type == "video" %}
-                    <video src="/dynamic/qobo_test.mp4" controls> {# TODO: placeholder #}
-                        <embed src="/img/player.swf" width="500" height="400"></embed>
-                    </video>
-                    {% endif %}
-                </div>
-            </td>
             <td class="contentBg" width="300">
+                <b>Username</b><br>
                 <img src="/img/avatar.png" width="96" class="avatar">
                 <table width="100%">
                     <tbody>
@@ -36,6 +28,15 @@
                         </tr>
                     </tbody>
                 </table>
+            </td>
+            <td class="contentBgWhite" width="500">
+                <div>
+                    {% if submission.type == "video" %}
+                    <video src="/dynamic/qobo_test.mp4" width="500" height="400" controls> {# TODO: placeholder #}
+                        <embed src="/img/player.swf" width="500" height="400"></embed>
+                    </video>
+                    {% endif %}
+                </div>
             </td>
         </tr>
     </tbody>
