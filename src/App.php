@@ -5,9 +5,11 @@ namespace Qobo;
 
 use Qobo\Framework\Container;
 use Qobo\Framework\Router;
+use Qobo\Helpers\Profiler;
 
 class App {
     protected static Container $container;
+    protected static array $config;
 
     public const MIDDLEWARES = [
         "guest" => \Qobo\Middlewares\Guest::class,
@@ -30,6 +32,10 @@ class App {
 
     private static function cleanup() {
         unset($_SESSION["__flash"]);
+
+        if (self::$config["mode"] == "DEV") {
+            Profiler::getInfo();
+        }
     }
 
     public static function container() {
@@ -40,9 +46,19 @@ class App {
         return static::$container;
     }
 
-    public static function run(Container $container, Router $router) {
+    public static function config() {
+        if (static::$config === null) {
+            throw new \Exception("You haven't set the app config!");
+        }
+
+        return static::$config;
+    }
+
+    public static function run(Container $container, Router $router, array $config) {
         try {
             static::$container = $container;
+            static::$config = $config;
+
             $router->run(parse_url($_SERVER["REQUEST_URI"])["path"], $_SERVER['REQUEST_METHOD']);
         } catch (\Exception $error) {
             die('<pre>QoboFramework: Something went very wrong. Error:</pre> <pre>'. $error->getMessage() . '</pre>');

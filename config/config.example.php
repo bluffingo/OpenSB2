@@ -16,6 +16,6 @@ return [
         "password" => "",
         "host" => "127.0.0.1",
     ],
-    // TODO: Use this for something.
+    // put "PROD" for production, put "DEV" for development
     "mode" => "PROD"
 ];

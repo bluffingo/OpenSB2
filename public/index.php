@@ -3,6 +3,9 @@
 include $_SERVER["DOCUMENT_ROOT"] . '/../vendor/autoload.php';
 
 use Qobo\App;
+use Qobo\Helpers\Profiler;
+
+Profiler::start();
 
 if (file_exists($_SERVER["DOCUMENT_ROOT"] . '/../config/config.php')) {
     $config = include_once $_SERVER["DOCUMENT_ROOT"] . '/../config/config.php';
@@ -11,10 +14,11 @@ if (file_exists($_SERVER["DOCUMENT_ROOT"] . '/../config/config.php')) {
     throw new Exception("Something blew up! Please contact a Bittoco developer / system administrator to resolve this issue.");
 }
 
+
 session_name("qobosession");
 session_start();
 
 $container = include_once $_SERVER["DOCUMENT_ROOT"] . '/../src/Services.php';
 $router = include_once $_SERVER["DOCUMENT_ROOT"] . '/../src/Routes.php';
 
-App::run($container, $router);
+App::run($container, $router, $config);

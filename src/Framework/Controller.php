@@ -20,10 +20,12 @@ class Controller {
     public $db;
     public $frontend;
     public $sbdb;
+    public $appConfig;
 
     public function __construct() {
         $this->db = App::container()->get(DB::class);
         $this->frontend = App::container()->get(Frontend::class);
+        $this->appConfig = App::config();
 
         // this is shit. i know. -chaziz 5/7/2024
         try {
@@ -39,7 +41,7 @@ class Controller {
         echo json_encode($data);
     }
 
-    public function returnXML( $data ) {
+    public function returnXML($data) {
         header('Content-Type: application/xml');
 
         $xml_data = new SimpleXMLElement('<?xml version="1.0"?><data></data>');

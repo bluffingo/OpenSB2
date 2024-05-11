@@ -15,8 +15,10 @@ class Frontend {
 
     function __construct() {
         $loader = new \Twig\Loader\FilesystemLoader($_SERVER["DOCUMENT_ROOT"] . '/../src/templates/qobo/');
-        
-        $this->twig = new \Twig\Environment($loader);
+
+        $this->twig = new \Twig\Environment($loader, [
+            "cache" => $_SERVER['DOCUMENT_ROOT'] . '/../.twigcache',
+        ]);
         $this->twig->addExtension(new FrontendTwigExtension());
 
         $this->db = App::container()->get(DB::class);

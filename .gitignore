@@ -21,3 +21,6 @@ composer.lock
 /flash/player.html
 /flash/player.swd
 /flash/player.swf
+
+# twig cache
+/.twigcache
