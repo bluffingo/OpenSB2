@@ -5,7 +5,15 @@
 	<tbody>
         <tr class="titleBgDark">
             <td colspan="3">
-				[category] - page [?] of [?]
+				{% if catagory == "music" %}
+                Music - page [?] of [?]
+                {% elseif catagory == "video" %}
+                Videos - page [?] of [?]
+                {% elseif catagory == "image" %}
+                Images - page [?] of [?]
+                {% elseif catagory == "flash" %}
+                Flash - page [?] of [?]
+                {% endif %}
             </td>
         </tr>
         <tr class="titleBg">
