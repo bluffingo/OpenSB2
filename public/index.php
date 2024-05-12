@@ -7,11 +7,10 @@ use Qobo\Helpers\Profiler;
 
 Profiler::start();
 
-$config = include_once $_SERVER["DOCUMENT_ROOT"] . '/../config/config.php';
-
 session_name("qobosession");
 session_start();
 
+$config = include_once $_SERVER["DOCUMENT_ROOT"] . '/../config/config.php';
 $container = include_once $_SERVER["DOCUMENT_ROOT"] . '/../src/Services.php';
 $router = include_once $_SERVER["DOCUMENT_ROOT"] . '/../src/Routes.php';
 
