@@ -14,10 +14,10 @@ class Frontend {
     private $auth;
 
     function __construct() {
-        $loader = new \Twig\Loader\FilesystemLoader($_SERVER["DOCUMENT_ROOT"] . '/../src/templates/qobo/');
+        $loader = new \Twig\Loader\FilesystemLoader($_SERVER["DOCUMENT_ROOT"] . '/../src/templates/squarebracket/');
 
         $this->twig = new \Twig\Environment($loader, [
-            "cache" => $_SERVER['DOCUMENT_ROOT'] . '/../.twigcache',
+            //"cache" => $_SERVER['DOCUMENT_ROOT'] . '/../.twigcache',
         ]);
         $this->twig->addExtension(new FrontendTwigExtension());
 

@@ -1,0 +1,45 @@
+.jumbotron {
+  &.homepage-banner {
+    background: #FF8A00;
+    color: white;
+    margin-top: -$header-main-height;
+    height: 150px + $header-main-height;
+
+    .jumbotron-container {
+      padding-top: $header-main-height;
+      height: 150px + $header-main-height;
+
+      .jumbotron-welcome {
+        flex-grow: 1;
+
+        .jumbotron-logged-in {
+          display: flex;
+          align-items: center;
+
+          .pfp {
+            height: 100px;
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+  }
+
+  &.profile-banner {
+    background: #111 center/cover;
+    margin-top: -($header-user-height + $header-main-height);
+    height: 250px + ($header-user-height + $header-main-height);
+
+    .jumbotron-container {
+      padding-top: ($header-user-height + $header-main-height);
+    }
+  }
+
+  // duplicate of the page class
+  .jumbotron-container {
+    @include maxwidths();
+    display: flex;
+    align-items: center;
+    margin: auto;
+  }
+}

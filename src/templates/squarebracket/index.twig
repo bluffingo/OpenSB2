@@ -1,0 +1,61 @@
+{% extends "components/template.twig" %}
+
+{% block content %}
+<table class="tableBg" width="800" cellspacing="1" cellpadding="4">
+	<tbody>
+        <tr class="titleBg">
+            <td colspan="2">
+				Home
+            </td>
+        </tr>
+		<tr>
+			<td class="contentBg" width="48" align="center">
+				<a href="/browse.php?category=video">
+					<img src="/img/icons/video.png">
+				</a>
+			</td>
+			<td class="contentBgWhite">
+				<a href="/browse.php?category=video">
+					Videos
+				</a>
+			</td>
+		</tr>
+		<tr>
+			<td class="contentBg" width="48" align="center">
+				<a href="/browse.php?category=image">
+					<img src="/img/icons/image.png">
+				</a>
+			</td>
+			<td class="contentBgWhite">
+				<a href="/browse.php?category=image">
+					Images
+				</a>
+			</td>
+		</tr>
+		<tr>
+			<td class="contentBg" width="48" align="center">
+				<a href="/browse.php?category=music">
+					<img src="/img/icons/music.png">
+				</a>
+			</td>
+			<td class="contentBgWhite">
+				<a href="/browse.php?category=music">
+					Music
+				</a>
+			</td>
+		</tr>
+		<tr>
+			<td class="contentBg" width="48" align="center">
+				<a href="/browse.php?category=flash">
+					<img src="/img/icons/flash.png">
+				</a>
+			</td>
+			<td class="contentBgWhite">
+				<a href="/browse.php?category=music">
+					Flash
+				</a>
+			</td>
+		</tr>
+	</tbody>
+</table>
+{% endblock %}

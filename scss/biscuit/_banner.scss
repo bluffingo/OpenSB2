@@ -1,0 +1,29 @@
+.banner {
+  padding: 8px 10px;
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+
+  .notification-icon {
+    margin-right: 6px;
+  }
+}
+
+@each $color, $value in $color-map {
+  .banner-#{$color} {
+    background-color: $value;
+    color: contrast-color($value, #000, #fff);
+
+    // without this, for example, the "guidelines" link in "Make sure you have read the guidelines first"
+    // would look weird as shit.
+    a {
+      color: inherit;
+      text-decoration: underline;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: lighten(contrast-color($value, #000, #fff), 20%);
+      }
+    }
+  }
+}

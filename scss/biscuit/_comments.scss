@@ -1,0 +1,55 @@
+.comment {
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  border-bottom: 1px solid $content-box-border-color;;
+
+  img.pfp {
+    width: 50px;
+    height: 50px;
+  }
+
+  .comment-body {
+    //width: 775px;
+    width: 100%;
+    margin-left: 10px;
+
+    .comment-contents {
+      margin-top: 6px;
+
+      p {
+        margin: 0;
+      }
+
+      blockquote {
+        color: #789922;
+        margin: 0;
+        p:before {
+          content: ">";
+        }
+      }
+    }
+  }
+}
+
+#replies {
+  .comment {
+    img.pfp {
+      width: 60px;
+    }
+
+    .comment-body {
+      width: 675px;
+      padding-left: 46px;
+    }
+  }
+}
+
+.new-comment {
+  margin-bottom: 5px;
+
+  #comment_button {
+    margin-left: auto;
+    display: block;
+  }
+}

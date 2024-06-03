@@ -1,0 +1,44 @@
+{% extends "components/template.twig" %}
+
+{% block content %}
+<table class="tableBg" width="800" cellspacing="1" cellpadding="4" align="center">
+    <tbody>
+        <tr class="titleBg">
+            <td colspan="2">
+				{{ submission.title }}
+            </td>
+        </tr>
+        <tr valign="top">
+            <td class="contentBg" width="300">
+                <b>Username</b><br>
+                <img src="/img/avatar.png" width="96" class="avatar">
+                <table width="100%">
+                    <tbody>
+                        <tr>
+                            <td><b>Posted by:</b></td>
+                            <td>Username</td>
+                        </tr>
+                        <tr>
+                            <td><b>Post time:</b></td>
+                            <td>{{ submission.published | qobo_date('F j, Y') }}</td>
+                        </tr>
+                        <tr>
+                            <td><b>Views:</b></td>
+                            <td>123456789</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+            <td class="contentBgWhite" width="500">
+                <div>
+                    {% if submission.type == "video" %}
+                    <video src="/dynamic/qobo_test.mp4" width="500" height="400" controls> {# TODO: placeholder #}
+                        <embed src="/img/player.swf" width="500" height="400"></embed>
+                    </video>
+                    {% endif %}
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+{% endblock %}

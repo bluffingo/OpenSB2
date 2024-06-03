@@ -1,0 +1,72 @@
+.profile-box {
+  color: white;
+  display: flex;
+  padding: 10px;
+  height: $profile-intro-height;
+
+  &.centered {
+    text-align: center
+  }
+
+  h1 {
+    margin: 0;
+    font-size: 14px;
+  }
+
+  .profile-box-pfp {
+    width: $pfp-width-profiles;
+    margin-right: 10px;
+
+    .pfp {
+      width: $pfp-width-profiles;
+    }
+  }
+
+  .profile-box-info {
+    width: 100%;
+
+    .profile-box-username {
+      font-size: 15pt;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .profile-box-links {
+      font-size: 12pt;
+
+      .link {
+        margin-right: 7px;
+        text-decoration: none;
+        border-bottom: 1px dotted #864e14;
+      }
+    }
+  }
+}
+
+.profile-featured-submission {
+  text-align: center;
+
+  .profile-featured-submission-title {
+    margin-top: 6px;
+    a {
+      font-weight: normal;
+    }
+  }
+
+  /* will this fuck up with wide thumbnails? */
+  img {
+    height: 200px;
+  }
+}
+
+.profile-intro {
+  background: rgba($content-box-border-color, 75%);
+  background: linear-gradient(0deg, rgba($content-box-border-color,75%) 0%, rgba(0,0,0,0) 100%);
+  margin-top: -$profile-intro-height;
+
+  text-shadow: 0 0 0.5em #000000;
+
+  .page-contents {
+    margin: auto;
+  }
+}

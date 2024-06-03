@@ -6,10 +6,12 @@ composer.lock
 # Compiled SCSS
 /public/img/poktube.css
 /public/img/qobo.css
+/public/img/biscuit.css
 
 # Source maps
 /public/img/poktube.css.map
 /public/img/qobo.css.map
+/public/img/biscuit.css.map
 
 # Config
 /config/config.php

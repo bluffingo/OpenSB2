@@ -1,0 +1,25 @@
+/* Style for the menu */
+.menu {
+  display: none;
+  position: absolute;
+  background-color: $content-box-background-color;
+  border: 1px solid $content-box-border-color;
+  padding: 5px 10px;
+  min-width: 100px;
+  z-index: 5259;
+
+  .menu-item-button {
+    display: block;
+    text-align: left;
+    padding: 5px 0;
+    color: rgba(black, 80%);
+    &:hover {
+      color: black;
+    }
+  }
+}
+
+/* Style for the button */
+.menuButton {
+  cursor: pointer;
+}

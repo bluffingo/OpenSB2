@@ -1,0 +1,5 @@
+{% extends "components/template.twig" %}
+
+{% block content %}
+	{{ source('md/' ~ page) | parse_md_read_only }}
+{% endblock %}

@@ -1,0 +1,122 @@
+.headers {
+  position: sticky;
+  top: 0;
+  z-index: 47101;
+  backdrop-filter: blur(4px);
+}
+
+.header-links
+{
+  text-align: right;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+
+  .header-links-username {
+    @include responsive('medium') {
+      display: block;
+    }
+    display: none;
+    margin-right: 10px;
+    font-size: 12px;
+  }
+
+  .header-links-caret {
+    margin-left: 2px;
+    font-size: 10px;
+  }
+
+  .menuButton {
+    .pfp {
+      width: 32px;
+    }
+  }
+}
+
+.header-logo
+{
+  a {
+    display: block;
+    height: $header-logo-height;
+  }
+
+  .logo {
+    @include responsive('tiny') {
+      display: none;
+    }
+    @include responsive('medium') {
+      display: inline;
+    }
+    height: $header-logo-height;
+  }
+
+  .logo-small {
+    @include responsive('tiny') {
+      display: inline;
+    }
+    @include responsive('medium') {
+      display: none;
+    }
+    height: $header-logo-height;
+  }
+
+  margin-right: 10px;
+}
+
+form.header-search
+{
+  display: none;
+  width: 250px;
+
+  @include responsive('small') {
+    display: block;
+    margin-left: 15px;
+  }
+
+  #header-search-input {
+
+    @include responsive('small') {
+      max-width: 100px;
+    }
+    @include responsive('medium') {
+      max-width: 250px - 75px;
+    }
+
+    padding: 6px;
+  }
+
+  .form-button-container {
+    display: inline;
+  }
+}
+
+td.h
+{
+  padding: 5px;
+}
+
+.menulink
+{
+  color: black;
+  margin: 0 7px;
+  font-size: 14px;
+}
+
+.header
+{
+  .header-container {
+    @include maxwidths();
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: auto;
+  }
+
+  width: 100%;
+  background-color: rgba(white, 0.95);
+  height: $header-main-height;
+  display: flex;
+  border-bottom: 1px solid lightgrey;
+}
