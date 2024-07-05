@@ -1,0 +1,30 @@
+.form-input {
+  margin-bottom: 8px;
+}
+
+.form-submit {
+  width: 100%;
+}
+
+.form-submit-wide {
+  width: 100%;
+  padding: 0;
+}
+
+.form-button-container {
+  text-align: right;
+}
+
+.form-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  &.edit-page {
+    width: 300px;
+  }
+}
+
+label {
+  display: block;
+  margin-bottom: 4px;
+}

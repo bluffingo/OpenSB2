@@ -1,0 +1,25 @@
+.tabcontent {
+  display: none;
+}
+
+.tablink {
+  border: none;
+  font-family: $font;
+  padding: 4px 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  background-color: #eeeeee;
+
+  &:hover {
+    background-color: #fafafa;
+  }
+
+  &:focus {
+    outline: none;
+    background-color: #ddd;
+  }
+
+  &.active {
+    background-color: #ccc;
+  }
+}
