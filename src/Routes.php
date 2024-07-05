@@ -10,17 +10,17 @@
  * All controllers are in ``src/Controller``. Dynamic routing still hasn't been implemented because i'm a lazy bitch
  */
 
-use Qobo\Framework\Router;
+use OpenSB2\Framework\Router;
 
-use Qobo\Controllers\IndexController;
-use Qobo\Controllers\MiscController;
-use Qobo\Controllers\ViewController;
-use Qobo\Controllers\AuthController;
-use Qobo\Controllers\UploadController;
-use Qobo\Controllers\ProfileController;
-use Qobo\Controllers\SBMigrateController;
-use Qobo\Controllers\BrowseController;
-use Qobo\Controllers\API\PlayerController;
+use OpenSB2\Controllers\IndexController;
+use OpenSB2\Controllers\MiscController;
+use OpenSB2\Controllers\ViewController;
+use OpenSB2\Controllers\AuthController;
+use OpenSB2\Controllers\UploadController;
+use OpenSB2\Controllers\ProfileController;
+use OpenSB2\Controllers\SBMigrateController;
+use OpenSB2\Controllers\BrowseController;
+use OpenSB2\Controllers\API\PlayerController;
 
 $router = new Router();
 

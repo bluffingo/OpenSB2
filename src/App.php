@@ -1,19 +1,19 @@
 <?php
 // Copyright Chaziz Multimedia Entertainment and Bittoco 2024, all rights reserved.
 
-namespace Qobo;
+namespace OpenSB2;
 
-use Qobo\Framework\Container;
-use Qobo\Framework\Router;
-use Qobo\Helpers\Profiler;
+use OpenSB2\Framework\Container;
+use OpenSB2\Framework\Router;
+use OpenSB2\Helpers\Profiler;
 
 class App {
     protected static Container $container;
     protected static array $config;
 
     public const MIDDLEWARES = [
-        "guest" => \Qobo\Middlewares\Guest::class,
-        "loggedIn" => \Qobo\Middlewares\LoggedIn::class,
+        "guest" => \OpenSB2\Middlewares\Guest::class,
+        "loggedIn" => \OpenSB2\Middlewares\LoggedIn::class,
     ];
 
     public static function resolveMiddleware($key, $uri, $method) {

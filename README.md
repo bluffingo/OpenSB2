@@ -9,7 +9,7 @@ We'll assume you already have a webserver (preferably Apache) and a MySQL or Mar
 4. Compile the SCSS using the ``compile-scss.sh`` script available in the ``tools`` folder.
 
 ### Apache virtual host
-Replace ``LOCATION`` with where your copy of bitQobo is located.
+Replace ``LOCATION`` with where your copy of OpenSB2 is located.
 
 ```
 <VirtualHost *>
@@ -27,7 +27,7 @@ Replace ``LOCATION`` with where your copy of bitQobo is located.
 ```
 
 ### Docker image
-bitQobo comes with a simple Docker image running MariaDB and NGINX. You can set it up really easily
+OpenSB2 comes with a simple Docker image running MariaDB and NGINX. You can set it up really easily
 
 1. Edit MariaDB environment variables in ``docker-compose.yml`` and change the DB host in ``config/config.php`` to ``mariadb``
 2. Run ``docker compose up --build``
@@ -38,4 +38,4 @@ bitQobo comes with a simple Docker image running MariaDB and NGINX. You can set 
 If you have any issues setting the Docker images up for a dev instance contact @rgbagain in the Qobo development GC. I'd be happy to help.
 
 ## Regarding OpenSB
-bitQobo is not compatible with OpenSB databases, and vice versa.
+OpenSB2 is not compatible with OpenSB databases, and vice versa.

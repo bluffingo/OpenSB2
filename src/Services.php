@@ -7,11 +7,11 @@
  * Put shit here you want to use in
  */
 
-use Qobo\Framework\Container;
+use OpenSB2\Framework\Container;
 
-use Qobo\Framework\DB;
-use Qobo\Framework\Auth;
-use Qobo\Framework\Frontend;
+use OpenSB2\Framework\DB;
+use OpenSB2\Framework\Auth;
+use OpenSB2\Framework\Frontend;
 
 $container = new Container();
 

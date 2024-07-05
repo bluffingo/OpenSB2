@@ -1,12 +1,12 @@
 <?php
 // Copyright Chaziz Multimedia Entertainment and Bittoco 2024, all rights reserved.
 
-namespace Qobo\Framework;
+namespace OpenSB2\Framework;
 
-use Qobo\App;
-use Qobo\Framework\FrontendTwigExtension;
-use Qobo\Framework\DB;
-use Qobo\Framework\Auth;
+use OpenSB2\App;
+use OpenSB2\Framework\FrontendTwigExtension;
+use OpenSB2\Framework\DB;
+use OpenSB2\Framework\Auth;
 
 class Frontend {
     private $twig;

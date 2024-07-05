@@ -1,10 +1,10 @@
 <?php
 // Copyright Chaziz Multimedia Entertainment and Bittoco 2024, all rights reserved.
 
-namespace Qobo\Framework;
+namespace OpenSB2\Framework;
 
-use Qobo\App;
-use Qobo\Framework\DB;
+use OpenSB2\App;
+use OpenSB2\Framework\DB;
 
 class Auth {
     private $db;

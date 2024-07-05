@@ -1,9 +1,9 @@
 <?php
 // Copyright Chaziz Multimedia Entertainment and Bittoco 2024, all rights reserved.
 
-namespace Qobo\Controllers\API;
+namespace OpenSB2\Controllers\API;
 
-use Qobo\Framework\Controller;
+use OpenSB2\Framework\Controller;
 
 // this is for xml stuff.
 class PlayerController extends Controller {

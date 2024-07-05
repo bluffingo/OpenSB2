@@ -1,7 +1,7 @@
 <?php
 // Copyright Chaziz Multimedia Entertainment and Bittoco 2024, all rights reserved.
 
-namespace Qobo\Helpers;
+namespace OpenSB2\Helpers;
 
 // people: how bad of a profiler can you make
 // me:

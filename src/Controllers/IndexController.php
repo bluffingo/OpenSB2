@@ -1,9 +1,9 @@
 <?php
 // Copyright Chaziz Multimedia Entertainment and Bittoco 2024, all rights reserved.
 
-namespace Qobo\Controllers;
+namespace OpenSB2\Controllers;
 
-use Qobo\Framework\Controller;
+use OpenSB2\Framework\Controller;
 
 class IndexController extends Controller {
     public function index() {

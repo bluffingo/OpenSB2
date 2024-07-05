@@ -1,9 +1,9 @@
 <?php
 // Copyright Chaziz Multimedia Entertainment and Bittoco 2024, all rights reserved.
 
-namespace Qobo\Framework;
+namespace OpenSB2\Framework;
 
-use Qobo\Framework\DateUtilities;
+use OpenSB2\Framework\DateUtilities;
 use Parsedown;
 
 class FrontendTwigExtension extends \Twig\Extension\AbstractExtension

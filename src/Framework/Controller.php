@@ -1,14 +1,14 @@
 <?php
 // Copyright Chaziz Multimedia Entertainment and Bittoco 2024, all rights reserved.
 
-namespace Qobo\Framework;
+namespace OpenSB2\Framework;
 
 use \SimpleXMLElement;
 
-use Qobo\App;
-use Qobo\Helpers\XML;
-use Qobo\Framework\DB;
-use Qobo\Framework\Frontend;
+use OpenSB2\App;
+use OpenSB2\Helpers\XML;
+use OpenSB2\Framework\DB;
+use OpenSB2\Framework\Frontend;
 
 /**
  * QoboFramework Controller.

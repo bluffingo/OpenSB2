@@ -2,8 +2,8 @@
 // Copyright Chaziz Multimedia Entertainment and Bittoco 2024, all rights reserved.
 include $_SERVER["DOCUMENT_ROOT"] . '/../vendor/autoload.php';
 
-use Qobo\App;
-use Qobo\Helpers\Profiler;
+use OpenSB2\App;
+use OpenSB2\Helpers\Profiler;
 
 Profiler::start();
 

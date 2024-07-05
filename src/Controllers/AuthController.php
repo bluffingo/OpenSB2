@@ -1,11 +1,11 @@
 <?php
 // Copyright Chaziz Multimedia Entertainment and Bittoco 2024, all rights reserved.
 
-namespace Qobo\Controllers;
+namespace OpenSB2\Controllers;
 
-use Qobo\App;
-use Qobo\Framework\Auth;
-use Qobo\Framework\Controller;
+use OpenSB2\App;
+use OpenSB2\Framework\Auth;
+use OpenSB2\Framework\Controller;
 
 class AuthController extends Controller {
     public function signout() {

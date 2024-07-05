@@ -1,11 +1,11 @@
 <?php
 // Copyright Chaziz Multimedia Entertainment and Bittoco 2024, all rights reserved.
 
-namespace Qobo\Middlewares;
+namespace OpenSB2\Middlewares;
 
-use Qobo\App;
-use Qobo\Framework\Auth;
-use Qobo\Framework\Middleware;
+use OpenSB2\App;
+use OpenSB2\Framework\Auth;
+use OpenSB2\Framework\Middleware;
 
 class LoggedIn extends Middleware {
     public function handle($uri, $method) {

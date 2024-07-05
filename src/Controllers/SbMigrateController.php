@@ -1,9 +1,9 @@
 <?php
 // Copyright Chaziz Multimedia Entertainment and Bittoco 2024, all rights reserved.
 
-namespace Qobo\Controllers;
+namespace OpenSB2\Controllers;
 
-use Qobo\Framework\Controller;
+use OpenSB2\Framework\Controller;
 
 class SBMigrateController extends Controller {
     public function migrate() {
@@ -21,16 +21,16 @@ class SBMigrateController extends Controller {
                 "error" => "Invalid username / password."
             ];
         }
-        
+
         $user = $this->sbdb->execute("SELECT * FROM users WHERE name = ?", [$username], true);
-        
+
         if (!$user) {
             return [
                 "success" => false,
                 "error" => "There is no account with that name."
             ];
         }
-        
+
         $verify = password_verify($password, $user['password']);
         if ($verify) {
             print_r($user);
@@ -40,6 +40,6 @@ class SBMigrateController extends Controller {
                 "error" => "Invalid username / password."
             ];
         }
-        
+
     }
 }

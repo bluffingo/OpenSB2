@@ -1,7 +1,7 @@
 <?php
 // Copyright Chaziz Multimedia Entertainment and Bittoco 2024, all rights reserved.
 
-namespace Qobo\Framework;
+namespace OpenSB2\Framework;
 
 use PDO;
 use PDOException;
@@ -37,7 +37,7 @@ class DB
         $rows = $result->rowCount();
 
         if(!$rows) {
-            return [];    
+            return [];
         } elseif ($single) {
             return $result->fetch(PDO::FETCH_ASSOC);
         } else {
