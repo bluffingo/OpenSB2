@@ -1,5 +1,7 @@
 <?php
-// Copyright Chaziz Multimedia Entertainment and Bittoco 2024, all rights reserved.
+/*
+ * SPDX-License-Identifier: AGPL-3.0-only
+ */
 include $_SERVER["DOCUMENT_ROOT"] . '/../vendor/autoload.php';
 
 use OpenSB2\App;
@@ -7,7 +9,7 @@ use OpenSB2\Helpers\Profiler;
 
 Profiler::start();
 
-session_name("qobosession");
+session_name("sbsession");
 session_start();
 
 $config = include_once $_SERVER["DOCUMENT_ROOT"] . '/../config/config.php';

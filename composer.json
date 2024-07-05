@@ -1,6 +1,6 @@
 {
-    "name": "bittoco/qobo",
-    "description": "A mid 2000s video sharing site",
+    "name": "bluffingo/opensb2",
+    "description": "Open SquareBracket 2",
     "type": "project",
     "require": {
         "twig/twig": "^3.0",

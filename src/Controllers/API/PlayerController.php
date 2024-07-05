@@ -1,5 +1,7 @@
 <?php
-// Copyright Chaziz Multimedia Entertainment and Bittoco 2024, all rights reserved.
+/*
+ * SPDX-License-Identifier: AGPL-3.0-only
+ */
 
 namespace OpenSB2\Controllers\API;
 

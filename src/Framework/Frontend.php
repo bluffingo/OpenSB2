@@ -1,5 +1,7 @@
 <?php
-// Copyright Chaziz Multimedia Entertainment and Bittoco 2024, all rights reserved.
+/*
+ * SPDX-License-Identifier: AGPL-3.0-only
+ */
 
 namespace OpenSB2\Framework;
 
@@ -14,7 +16,7 @@ class Frontend {
     private $auth;
 
     function __construct() {
-        $loader = new \Twig\Loader\FilesystemLoader($_SERVER["DOCUMENT_ROOT"] . '/../src/templates/squarebracket/');
+        $loader = new \Twig\Loader\FilesystemLoader($_SERVER["DOCUMENT_ROOT"] . '/../src/templates/biscuit/');
 
         $this->twig = new \Twig\Environment($loader, [
             //"cache" => $_SERVER['DOCUMENT_ROOT'] . '/../.twigcache',

@@ -1,33 +1,18 @@
 /*!
- * Biscuit (Finalium 2)
- * Made by Chaziz
+ * OpenSB Biscuit (Finalium 2)
+ * Made by Chaziz for OpenSB
  */
 
 @import 'biscuit/base_variables';
 
+// bootstrap icons
+//$bootstrap-icons-font-dir: "/assets" !default;
+//@import "../../vendor/twbs/bootstrap-icons/font/bootstrap-icons.scss";
+
 @import 'biscuit/imports';
-
-// google fonts inter is outdated
-@import url('https://rsms.me/inter/inter.css');
-
-// font used for chaziz/squarebracket branding
-@import url('https://fonts.googleapis.com/css2?family=Rethink+Sans:ital,wght@0,400..800;1,400..800&display=swap');
-
-// bootstrap fonts
-@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
-
-// fonts
-$font: 'Inter', Helvetica, Arial, sans-serif;
-$font-var: 'InterVariable', sans-serif;
-
-$font-branding: 'Rethink Sans', Helvetica, Arial, sans-serif;
 
 :root {
 	font-family: $font;
-	font-feature-settings: 'calt' 1, 'ospz' 1;
-}
-@supports (font-variation-settings: normal) {
-	:root { font-family: $font-var; }
 }
 
 *,
@@ -38,8 +23,8 @@ $font-branding: 'Rethink Sans', Helvetica, Arial, sans-serif;
 
 body
 {
-	background: #F9F9F9;
-	color: #000000;
+	background: #F5F5F5;
+	color: #333;
 	font-size: small;
 	padding: 0;
 	margin: 0;
@@ -47,38 +32,17 @@ body
 	line-height: 1.4;
 }
 
-td, th
-{
-	font-size: small;
-	padding: 0;
-}
-
 a
 {
 	text-decoration: none;
-	color: $primary;
+	color: $link-color;
 
 	&:hover {
 		text-decoration: underline;
 	}
-}
 
-table.c1 {
-	width: 100%;
-	border: 1px solid darken($secondary, 15%);
-
-	tbody {
-		margin: 0;
-	}
-
-	tr {
-		border: 1px solid darken($secondary, 15%);
-		padding: 20px;
-	}
-
-	tr.h {
-		background-color: darken($secondary, 15%);
-		color: #fff;
+	&:focus {
+		outline: 1px dotted;
 	}
 }
 
@@ -88,8 +52,7 @@ img
 }
 
 h1 {
-	font-family: $font-branding;
-	margin-top: 0px;
+	margin-top: 0;
 	font-size: 24px;
 }
 
@@ -126,7 +89,7 @@ input[type="number"] {
 	color: #000;
 	transition: border linear 0.3s;
 	border-radius: 3px;
-	padding: 5px;
+	padding: 6px;
 	font-family: $font;
 
 	&:focus {
@@ -150,8 +113,14 @@ pre {
 	white-space: pre-wrap;
 }
 
+blockquote {
+	margin: 0 0 0.5em 0;
+	padding-left: 0.8em;
+	border-left: 4px solid $content-box-border-color;
+}
+
 .pfp {
-	border-radius: $pfp-roundness;
+	border: 1px solid rgba(black, 0.2);
 }
 
 hr {
@@ -164,10 +133,13 @@ hr {
 	}
 }
 
-.userlink {
-	&.following {
-		color: #d78157;
-	}
+.userlink-handle {
+	color: #aaa;
+	text-decoration: none;
+}
+
+.fade {
+	color: #888;
 }
 
 @import 'biscuit/header';
@@ -177,12 +149,15 @@ hr {
 @import 'biscuit/banner';
 @import 'biscuit/comments';
 @import 'biscuit/sections';
-@import 'biscuit/journals';
 @import 'biscuit/buttons';
 @import 'biscuit/jumbotron';
 @import 'biscuit/menus';
 @import 'biscuit/tabs';
+@import 'biscuit/table';
+@import 'biscuit/pagination';
 
 @import 'biscuit/watch_page';
 @import 'biscuit/profile_page';
 @import 'biscuit/notice_page';
+@import 'biscuit/admin_page';
+@import 'biscuit/login_register_page';

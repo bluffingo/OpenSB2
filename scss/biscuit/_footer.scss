@@ -1,18 +1,34 @@
 .footer
 {
   .footer-container {
+    border-top: 1px solid $content-box-border-color;
+
     @include maxwidths();
     margin: auto;
 
-    img {
-      height: 50px;
+    .footer-content {
+      margin-top: 16px;
+      text-align: center;
+      span {
+        margin: 0 3px;
+      }
+    }
+
+    .footer-logo-chaziz {
+      margin-top: 5px;
+      img {
+        height: 15px;
+      }
+    }
+
+    .footer-links {
+      a {
+        margin-right: 5px;
+      }
     }
   }
 
-  margin-top: 5px;
-  padding: 15px 5px;
+  margin: 16px 0;
   line-height: 20px;
   clear: both;
-  background: $content-box-background-color;
-  border-top: 1px solid $content-box-border-color;
 }

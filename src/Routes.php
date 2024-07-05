@@ -1,5 +1,7 @@
 <?php
-// Copyright Chaziz Multimedia Entertainment and Bittoco 2024, all rights reserved.
+/*
+ * SPDX-License-Identifier: AGPL-3.0-only
+ */
 
 /**
  * QoboFramework Routing
@@ -42,16 +44,6 @@ $router->GET("/signout.php", [AuthController::class, "signout"])->useMiddleware(
 
 $router->GET("/upload.php", [UploadController::class, "upload"])->useMiddleware("loggedIn");
 $router->POST("/upload.php", [UploadController::class, "upload_post"])->useMiddleware("loggedIn");
-
-if(!is_null($config["opensb_mysql"]["database"])) {
-    $router->GET("/migrate.php", [SBMigrateController::class, "migrate"])->useMiddleware("loggedIn");
-    $router->POST("/migrate.php", [SBMigrateController::class, "migrate_post"])->useMiddleware("loggedIn");
-} else {
-    $router->GET("/migrate.php", function () {
-        http_response_code(400);
-        echo "Migration is turned off on this instance";
-    })->useMiddleware("loggedIn");
-}
 
 $router->GET("/api/player/get_video.php", [PlayerController::class, "getVideo"]);
 

@@ -1,8 +1,12 @@
 .comment {
-  margin-bottom: 10px;
-  padding-bottom: 10px;
+  padding-top: 7px;
+  padding-bottom: 7px;
   display: flex;
-  border-bottom: 1px solid $content-box-border-color;;
+  border-bottom: 1px solid $content-box-border-color;
+
+  &:last-child {
+    border-bottom: none;
+  }
 
   img.pfp {
     width: 50px;
@@ -20,36 +24,30 @@
       p {
         margin: 0;
       }
-
-      blockquote {
-        color: #789922;
-        margin: 0;
-        p:before {
-          content: ">";
-        }
-      }
     }
   }
 }
 
 #replies {
+  margin-top: 15px;
   .comment {
     img.pfp {
-      width: 60px;
-    }
+      width: 32px;
+      height: 32px;
 
-    .comment-body {
-      width: 675px;
-      padding-left: 46px;
+      &:last-child {
+        padding-bottom: 0;
+      }
     }
   }
 }
 
-.new-comment {
+.new-comment, .reply-form {
   margin-bottom: 5px;
 
-  #comment_button {
+  #comment_button, .submit-reply-button {
     margin-left: auto;
     display: block;
+    padding: 5px 10px;
   }
 }
