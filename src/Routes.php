@@ -4,7 +4,7 @@
  */
 
 /**
- * QoboFramework Routing
+ * OpenSB2Framework Routing
  *
  * Each URI points to it's specfic class and that classes method.
  * for example, [ExampleController, "example_func"] would point to "example_func" in the ExampleController class
@@ -28,23 +28,24 @@ $router = new Router();
 
 $router->GET("/", [IndexController::class, "index"]);
 
-$router->GET("/help.php", [MiscController::class, "help"]);
-$router->GET("/guidelines.php", [MiscController::class, "guidelines"]);
-$router->GET("/privacy.php", [MiscController::class, "privacy"]);
+$router->GET("/help", [MiscController::class, "help"]);
+$router->GET("/guidelines", [MiscController::class, "guidelines"]);
+$router->GET("/privacy", [MiscController::class, "privacy"]);
 
-$router->GET("/browse.php", [BrowseController::class, "browse"]);
-$router->GET("/view.php", [ViewController::class, "view"]);
-$router->GET("/profile.php", [ProfileController::class, "profile"]);
+$router->GET("/browse", [BrowseController::class, "browse"]);
+$router->GET("/view", [ViewController::class, "view"]);
+$router->GET("/profile", [ProfileController::class, "profile"]);
 
-$router->GET("/signin.php", [AuthController::class, "signin"])->useMiddleware("guest");
-$router->POST("/signin.php", [AuthController::class, "signin_post"])->useMiddleware("guest");
-$router->GET("/signup.php", [AuthController::class, "signup"])->useMiddleware("guest");
-$router->POST("/signup.php", [AuthController::class, "signup_post"])->useMiddleware("guest");
-$router->GET("/signout.php", [AuthController::class, "signout"])->useMiddleware("loggedIn");
+$router->GET("/signin", [AuthController::class, "signin"])->useMiddleware("guest");
+$router->POST("/signin", [AuthController::class, "signin_post"])->useMiddleware("guest");
+$router->GET("/signup", [AuthController::class, "signup"])->useMiddleware("guest");
+$router->POST("/signup", [AuthController::class, "signup_post"])->useMiddleware("guest");
+$router->GET("/signout", [AuthController::class, "signout"])->useMiddleware("loggedIn");
 
-$router->GET("/upload.php", [UploadController::class, "upload"])->useMiddleware("loggedIn");
-$router->POST("/upload.php", [UploadController::class, "upload_post"])->useMiddleware("loggedIn");
+$router->GET("/upload", [UploadController::class, "upload"])->useMiddleware("loggedIn");
+$router->POST("/upload", [UploadController::class, "upload_post"])->useMiddleware("loggedIn");
 
-$router->GET("/api/player/get_video.php", [PlayerController::class, "getVideo"]);
+// TODO: remove this.
+$router->GET("/api/player/get_video", [PlayerController::class, "getVideo"]);
 
 return $router;

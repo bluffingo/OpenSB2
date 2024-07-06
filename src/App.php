@@ -63,7 +63,7 @@ class App {
 
             $router->run(parse_url($_SERVER["REQUEST_URI"])["path"], $_SERVER['REQUEST_METHOD']);
         } catch (\Exception $error) {
-            die('<pre>QoboFramework: Something went very wrong. Error:</pre> <pre>'. $error->getMessage() . '</pre>');
+            die('<pre>OpenSB2: Something went very wrong. Error:</pre> <pre>'. $error->getMessage() . '</pre>');
         }
 
         self::cleanup();

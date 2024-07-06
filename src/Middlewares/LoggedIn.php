@@ -14,7 +14,7 @@ class LoggedIn extends Middleware {
         $authService = App::container()->get(Auth::class);
 
         if (!$authService->isLoggedIn()) {
-            header("Location: /signin.php");
+            header("Location: /signin");
             return;
         }
     }

@@ -1,23 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>squareBracket DEV</title>
+        <title>OpenSB2 Dev</title>
         <link rel="stylesheet" href="img/biscuit.css" type="text/css">
     </head>
     <body>
         <div class="headers">
             <div class="header">
                 <div class="header-container">
-                Placeholder!!!
+                    <div class="header-logo">
+                        <a href="/">
+                            <img alt="Logo" class="logo" src="/img/logo.png">
+                            <img alt="Logo" class="logo-small" src="/img/logo.png">
+                        </a>
+                    </div>
+                    <a class="menulink" href="/browse">Browse</a>
+                    <a class="menulink" href="/members">Members</a>
+                    <form class="header-search" action="/search">
+                        <input id="header-search-input" type="text" name="query" placeholder="Search...">
+                        <button id="header-search-button">
+                            <i class="bi bi-search"></i>
+                        </button>
+                    </form>
+                    <div class="header-links">
+                        Spongebob
+                    </div>
                 </div>
             </div>
         </div>
-        {% block content %}{% endblock %}
+        <div class="page">
+            <div class="page-contents">
+                <div class="container">
+                    {% block content %}{% endblock %}
+                </div>
+            </div>
+        </div>
         <footer class="footer">
             <div class="footer-container">
-                <img src="/img/squarebracket.png" alt="squareBracket Logo">
-                <p>© OpenSB Contributors 2021-{{ 'now' | date('Y') }}
-                <span aria-hidden="true">|</span> <a href="/privacy">Privacy policy</a></p>
+                <div class="footer-content">
+                    <div>Running <a href="/version">OpenSB2</a></div>
+                    <span><a href="/theme">Change theme</a></span>
+                    <span><a href="/rules">Rules</a></span>
+                    <span><a href="/tos">Terms of Service</a></span>
+                    <span><a href="/privacy">Privacy policy</a></span>
+                    <span>© 2021-{{ 'now' | date('Y') }} OpenSB contributors.</span>
+                </div>
             </div>
         </footer>
     </body>

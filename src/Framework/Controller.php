@@ -13,7 +13,7 @@ use OpenSB2\Framework\DB;
 use OpenSB2\Framework\Frontend;
 
 /**
- * QoboFramework Controller.
+ * OpenSB2Framework Controller.
  *
  * This is a base class that you can extend to make a valid controller for your route.
  * @author RGB
@@ -28,14 +28,6 @@ class Controller {
         $this->db = App::container()->get(DB::class);
         $this->frontend = App::container()->get(Frontend::class);
         $this->appConfig = App::config();
-
-        // this is shit. i know. -chaziz 5/7/2024
-        try {
-            $this->sbdb = App::container()->get("sb_db");
-        } catch (\Exception $e) {
-            $this->sbdb = null;
-        }
-
     }
 
     public function returnJSON(object $data) {
@@ -43,6 +35,7 @@ class Controller {
         echo json_encode($data);
     }
 
+    // TODO: remove this, not used by anything
     public function returnXML($data) {
         header('Content-Type: application/xml');
 

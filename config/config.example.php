@@ -1,5 +1,7 @@
 <?php
 /*
+ * SPDX-License-Identifier: AGPL-3.0-only
+ */
 
 return [
     // Database details. (Qobo only supports MySQL / MariaDB databases)
