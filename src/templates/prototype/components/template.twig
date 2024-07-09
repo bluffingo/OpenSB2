@@ -19,12 +19,12 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">OpenSB2</a>
+                <a class="navbar-brand" href="/">OpenSB2</a>
             </div>
 
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+                    <li><a href="#">Link</a></li>
                     <li><a href="#">Link</a></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
@@ -63,6 +63,18 @@
     </nav>
     {% block content %}
     {% endblock %}
+    <footer>
+        <div>
+            <div>
+                <div>Running <a href="/version">OpenSB2</a></div>
+                <span><a href="/theme">Change theme</a></span>
+                <span><a href="/rules">Rules</a></span>
+                <span><a href="/tos">Terms of Service</a></span>
+                <span><a href="/privacy">Privacy policy</a></span>
+                <span>© 2021-{{ 'now' | date('Y') }} OpenSB contributors.</span>
+            </div>
+        </div>
+    </footer>
 </div>
 
 <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script><!-- Include all compiled plugins (below), or include individual files as needed -->

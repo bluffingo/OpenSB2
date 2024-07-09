@@ -12,16 +12,16 @@ class ViewController extends Controller {
         $id = $_GET["id"];
 
         // placeholder, this should redirect to the homepage while showing an error banner,
-        // akin to vidlii and opensb.
+        // akin to vidlii and opensb1.
         if (!isset($id)) {
-            throw new \Exception("Missing submission id.");
+            throw new \Exception("Missing upload id.");
         }
 
         $submission = $this->db->execute("SELECT * FROM uploads where display_id = ?", [$id], true);
 
         // ditto.
         if (!$submission) {
-            throw new \Exception("This submission does not exist.");
+            throw new \Exception("This upload does not exist.");
         }
 
         $this->frontend->render("view", [
