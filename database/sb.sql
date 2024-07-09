@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 08, 2024 at 04:23 AM
+-- Generation Time: Jul 09, 2024 at 12:53 AM
 -- Server version: 10.4.32-MariaDB
--- PHP Version: 8.3.4
+-- PHP Version: 8.3.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,18 +24,18 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `submissions`
+-- Table structure for table `uploads`
 --
 
-CREATE TABLE `submissions` (
+CREATE TABLE `uploads` (
   `id` int(11) NOT NULL,
   `display_id` varchar(11) NOT NULL,
   `title` varchar(128) NOT NULL,
   `description` varchar(8192) NOT NULL,
   `published` int(11) NOT NULL,
   `author` int(11) NOT NULL,
-  `rating` enum('general','questionable','mature') NOT NULL,
-  `type` enum('video','image','music','flash') NOT NULL
+  `rating` enum('general','suggestive','explicit') NOT NULL,
+  `type` enum('video','image','music') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -59,9 +59,9 @@ CREATE TABLE `users` (
 --
 
 --
--- Indexes for table `submissions`
+-- Indexes for table `uploads`
 --
-ALTER TABLE `submissions`
+ALTER TABLE `uploads`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -75,9 +75,9 @@ ALTER TABLE `users`
 --
 
 --
--- AUTO_INCREMENT for table `submissions`
+-- AUTO_INCREMENT for table `uploads`
 --
-ALTER TABLE `submissions`
+ALTER TABLE `uploads`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --

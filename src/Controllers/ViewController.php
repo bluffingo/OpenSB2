@@ -17,7 +17,7 @@ class ViewController extends Controller {
             throw new \Exception("Missing submission id.");
         }
 
-        $submission = $this->db->execute("SELECT * FROM submissions where display_id = ?", [$id], true);
+        $submission = $this->db->execute("SELECT * FROM uploads where display_id = ?", [$id], true);
 
         // ditto.
         if (!$submission) {

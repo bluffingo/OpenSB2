@@ -1,0 +1,40 @@
+{% extends "components/template.twig" %}
+
+{% block content %}
+<table class="tableBg" width="800" cellspacing="1" cellpadding="4">
+    <tbody>
+        <tr class="titleBg">
+            <td colspan="2">
+                 {{ profile.name }}
+            </td>
+        </tr>
+        <tr class="contentBg" valign="top">
+            <td width="128" align="center">
+                <img src="/img/avatar.png" width="96" class="avatar">
+            </td>
+            <td>
+                <table width="100%">
+                    <tbody>
+                        <tr>
+                            <td><b>Name:</b></td>
+                            <td>{{ profile.name }}</td>
+                        </tr>
+                        <tr>
+                            <td><b>Uploads:</b></td>
+                            <td>123456789 (placeholder)</td>
+                        </tr>
+                        <tr>
+                            <td><b>Registered:</b></td>
+                            <td>{{ profile.joined | qobo_date('F j, Y') }}</td>
+                        </tr>
+                        <tr>
+                            <td><b>Last Seen:</b></td>
+                            <td><b>Today</b> at 12:34:56 PM</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </tbody>
+</table>
+{% endblock %}

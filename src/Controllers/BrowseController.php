@@ -19,11 +19,11 @@ class BrowseController extends Controller {
 
         // todo: validation
 
-        $submissions = $this->db->execute("SELECT * FROM submissions where type = ? LIMIT 12", [$category]);
+        $uploads = $this->db->execute("SELECT * FROM uploads where type = ? LIMIT 12", [$category]);
 
         return $this->frontend->render("browse", [
-            'submissions' => $submissions,
-            'catagory' => $category,
+            'uploads' => $uploads,
+            'category' => $category,
         ]);
     }
 }

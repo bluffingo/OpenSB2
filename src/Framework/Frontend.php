@@ -16,7 +16,7 @@ class Frontend {
     private $auth;
 
     function __construct() {
-        $loader = new \Twig\Loader\FilesystemLoader($_SERVER["DOCUMENT_ROOT"] . '/../src/templates/biscuit/');
+        $loader = new \Twig\Loader\FilesystemLoader($_SERVER["DOCUMENT_ROOT"] . '/../src/templates/prototype/');
 
         $this->twig = new \Twig\Environment($loader, [
             //"cache" => $_SERVER['DOCUMENT_ROOT'] . '/../.twigcache',

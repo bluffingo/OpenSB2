@@ -1,0 +1,53 @@
+{% extends "components/template.twig" %}
+
+{% block content %}
+<table class="tableBg" width="800" cellspacing="1" cellpadding="4">
+	<tbody>
+        <tr class="titleBgDark">
+            <td colspan="3">
+				{% if catagory == "music" %}
+                Music - page [?] of [?]
+                {% elseif catagory == "video" %}
+                Videos - page [?] of [?]
+                {% elseif catagory == "image" %}
+                Images - page [?] of [?]
+                {% elseif catagory == "flash" %}
+                Flash - page [?] of [?]
+                {% endif %}
+            </td>
+        </tr>
+        <tr class="titleBg">
+            <td width="70">Preview</td>
+			<td>Title/Description</td>
+			<td>Author</td>
+        </tr>
+		{% if submissions %}
+		{% for submission in submissions %}
+		<tr>
+			<td class="contentBgWhite" align="center">
+				<a href="view?id={{ submission.display_id }}">
+					<img src="img/default.png" class="avatar" width="75">
+				</a>
+			</td>
+			<td class="contentBg">
+				<div class="title">
+					<a href="view?id={{ submission.display_id }}">{{ submission.title }}</a>
+				</div>
+				<div class="description">
+					{% if submission.description %}
+					{{ submission.description|length > 200 ? submission.description|slice(0, 200) ~ '...' : submission.description  }}
+					{% else %}
+					No description.
+					{% endif %}
+				</div>
+			</td>
+			<td class="contentBgWhite textSmall">
+				{{ submission.published | qobo_date('F j, Y') }}<br>
+				by <a href="profile?user=Username">Username</a>
+			</td>
+		</tr>
+		{% endfor %}
+		{% endif %}
+	</tbody>
+</table>
+{% endblock %}
