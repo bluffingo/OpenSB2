@@ -4,9 +4,9 @@
     <div class="row">
         {% for upload in uploads %}
             <div class="col-sm-6 col-md-4">
-                <a href="view?id={{ upload.display_id }}">
+                <a href="/view?id={{ upload.display_id }}">
                     <div class="thumbnail">
-                        <img src="img/default.png">
+                        <img src="/img/unknown.svg">
                         <div class="caption">
                             <h3>{{ upload.title }}</h3>
                             <p>
